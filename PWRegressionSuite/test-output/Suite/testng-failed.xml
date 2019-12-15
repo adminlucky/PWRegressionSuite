@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="methods">
+  <test name="Test">
+    <classes>
+      <class name="testScripts.properties.createNewUnit"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)" parallel="methods">
+    <classes>
+      <class name="testScripts.properties.createNewUnit">
+        <methods>
+          <include name="getResult"/>
+          <include name="clickProperties"/>
+          <include name="startReport"/>
+          <include name="endReport"/>
+          <include name="createUnit"/>
+        </methods>
+      </class> <!-- testScripts.properties.createNewUnit -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
