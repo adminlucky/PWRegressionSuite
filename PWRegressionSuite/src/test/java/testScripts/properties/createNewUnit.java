@@ -72,6 +72,7 @@ public class createNewUnit extends TestBase  {
 		
 	}
 	// Need to capture exact failed step and handle screen capture while parallel execution and improve execution speed
+	
 	//@BeforeSuite
 	@BeforeTest
 	public void startReport(){
