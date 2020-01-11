@@ -1,22 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test verbose="2" name="Default test">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test">
     <classes>
       <class name="testScripts.properties.createNewUnit"/>
+      <class name="testScripts.leases.createNewLease"/>
+      <class name="testScripts.maintenance.createNewWorkorder"/>
     </classes>
-  </test> <!-- Default test -->
-  <test name="Default test(failed)">
+  </test> <!-- Test -->
+  <test name="Test(failed)">
     <classes>
-      <class name="testScripts.properties.createNewUnit">
+      <class name="testScripts.maintenance.createNewWorkorder">
+        <methods>
+          <include name="createWorkorder"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- testScripts.maintenance.createNewWorkorder -->
+      <class name="testScripts.leases.createNewLease">
         <methods>
           <include name="getResult"/>
-          <include name="openDashboards"/>
-          <include name="clickProperties"/>
-          <include name="startReport"/>
-          <include name="endReport"/>
+        </methods>
+      </class> <!-- testScripts.leases.createNewLease -->
+      <class name="testScripts.properties.createNewUnit">
+        <methods>
+          <include name="reportSetup"/>
+          <include name="tearDown"/>
+          <include name="createUnit"/>
+          <include name="getResult"/>
         </methods>
       </class> <!-- testScripts.properties.createNewUnit -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

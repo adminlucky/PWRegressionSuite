@@ -2,40 +2,38 @@
 <testng-results skipped="0" failed="2" total="3" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="208477" started-at="2019-12-11T19:57:54Z" finished-at="2019-12-11T20:01:23Z">
+  <suite name="Suite" duration-ms="100640" started-at="2020-01-11T19:50:53Z" finished-at="2020-01-11T19:52:33Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="208477" started-at="2019-12-11T19:57:54Z" finished-at="2019-12-11T20:01:23Z">
+    <test name="Test" duration-ms="100640" started-at="2020-01-11T19:50:53Z" finished-at="2020-01-11T19:52:33Z">
       <class name="testScripts.properties.createNewUnit">
-        <test-method status="PASS" signature="startReport()[pri:0, instance:testScripts.properties.createNewUnit@67b64c45]" name="startReport" is-config="true" duration-ms="201" started-at="2019-12-12T01:27:54Z" finished-at="2019-12-12T01:27:55Z">
+        <test-method status="PASS" signature="reportSetup()[pri:0, instance:testScripts.properties.createNewUnit@6442b0a6]" name="reportSetup" is-config="true" duration-ms="182" started-at="2020-01-12T01:20:53Z" finished-at="2020-01-12T01:20:53Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startReport -->
-        <test-method status="FAIL" signature="clickProperties()[pri:0, instance:testScripts.properties.createNewUnit@67b64c45]" name="clickProperties" duration-ms="68566" started-at="2019-12-12T01:27:55Z" finished-at="2019-12-12T01:29:03Z">
-          <exception class="org.openqa.selenium.InvalidSelectorException">
+        </test-method> <!-- reportSetup -->
+        <test-method status="FAIL" signature="createUnit()[pri:0, instance:testScripts.properties.createNewUnit@6442b0a6]" name="createUnit" duration-ms="38090" started-at="2020-01-12T01:20:53Z" finished-at="2020-01-12T01:21:31Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[invalid selector: Unable to locate an element with the xpath expression //a[contains(text(),'Properties')]aaa because of the following error:
-SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//a[contains(text(),'Properties')]aaa' is not a valid XPath expression.
-  (Session info: chrome=78.0.3904.108)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#saveAddrBrokerBtn"}
+  (Session info: chrome=79.0.3945.117)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T16:15:26.402Z'
-System info: host: 'RPIPL-NB-DL069', ip: '10.13.115.34', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+System info: host: 'RPIPL-NB-DL069', ip: '10.13.115.131', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}), userDataDir=C:\Users\RGANPI~1\AppData\Local\Temp\scoped_dir16164_1690893105}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:60562}, acceptInsecureCerts=false, browserVersion=78.0.3904.108, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true}]
-Session ID: 2a0278b5cc6da9f7c0c503f0c7eaa9f1
-*** Element info: {Using=xpath, value=//a[contains(text(),'Properties')]aaa}]]>
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}), userDataDir=C:\Users\RGANPI~1\AppData\Local\Temp\scoped_dir13452_1778941236}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=WINDOWS, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:54253}, acceptInsecureCerts=false, browserVersion=79.0.3945.117, browserName=chrome, javascriptEnabled=true, platformName=WINDOWS, setWindowRect=true}]
+Session ID: 9d9d9ca2dd402f722591ca709203d50b
+*** Element info: {Using=id, value=saveAddrBrokerBtn}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression //a[contains(text(),'Properties')]aaa because of the following error:
-SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//a[contains(text(),'Properties')]aaa' is not a valid XPath expression.
-  (Session info: chrome=78.0.3904.108)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#saveAddrBrokerBtn"}
+  (Session info: chrome=79.0.3945.117)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T16:15:26.402Z'
-System info: host: 'RPIPL-NB-DL069', ip: '10.13.115.34', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+System info: host: 'RPIPL-NB-DL069', ip: '10.13.115.131', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}), userDataDir=C:\Users\RGANPI~1\AppData\Local\Temp\scoped_dir16164_1690893105}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:60562}, acceptInsecureCerts=false, browserVersion=78.0.3904.108, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true}]
-Session ID: 2a0278b5cc6da9f7c0c503f0c7eaa9f1
-*** Element info: {Using=xpath, value=//a[contains(text(),'Properties')]aaa}
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}), userDataDir=C:\Users\RGANPI~1\AppData\Local\Temp\scoped_dir13452_1778941236}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=WINDOWS, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:54253}, acceptInsecureCerts=false, browserVersion=79.0.3945.117, browserName=chrome, javascriptEnabled=true, platformName=WINDOWS, setWindowRect=true}]
+Session ID: 9d9d9ca2dd402f722591ca709203d50b
+*** Element info: {Using=id, value=saveAddrBrokerBtn}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -47,10 +45,10 @@ Session ID: 2a0278b5cc6da9f7c0c503f0c7eaa9f1
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:458)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:402)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
-	at testScripts.properties.createNewUnit.clickProperties(createNewUnit.java:64)
+	at testScripts.properties.createNewUnit.createUnit(createNewUnit.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -77,76 +75,38 @@ Session ID: 2a0278b5cc6da9f7c0c503f0c7eaa9f1
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.InvalidSelectorException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickProperties -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:testScripts.properties.createNewUnit@67b64c45]" name="getResult" is-config="true" duration-ms="461" started-at="2019-12-12T01:29:03Z" finished-at="2019-12-12T01:29:04Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=clickProperties status=FAILURE method=createNewUnit.clickProperties()[pri:0, instance:testScripts.properties.createNewUnit@67b64c45] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="createUnit()[pri:0, instance:testScripts.properties.createNewUnit@67b64c45]" name="createUnit" duration-ms="101625" started-at="2019-12-12T01:29:04Z" finished-at="2019-12-12T01:30:45Z">
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createUnit -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:testScripts.properties.createNewUnit@67b64c45]" name="getResult" is-config="true" duration-ms="2" started-at="2019-12-12T01:30:45Z" finished-at="2019-12-12T01:30:45Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:testScripts.properties.createNewUnit@6442b0a6]" name="getResult" is-config="true" duration-ms="539" started-at="2020-01-12T01:21:31Z" finished-at="2020-01-12T01:21:31Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=createUnit status=SUCCESS method=createNewUnit.createUnit()[pri:0, instance:testScripts.properties.createNewUnit@67b64c45] output={null}]]]>
+                <![CDATA[[TestResult name=createUnit status=FAILURE method=createNewUnit.createUnit()[pri:0, instance:testScripts.properties.createNewUnit@6442b0a6] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="FAIL" signature="openDashboards()[pri:0, instance:testScripts.properties.createNewUnit@67b64c45]" name="openDashboards" duration-ms="36592" started-at="2019-12-12T01:30:45Z" finished-at="2019-12-12T01:31:22Z">
-          <exception class="org.openqa.selenium.InvalidSelectorException">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testScripts.properties.createNewUnit@6442b0a6]" name="tearDown" is-config="true" duration-ms="359" started-at="2020-01-12T01:22:33Z" finished-at="2020-01-12T01:22:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testScripts.properties.createNewUnit -->
+      <class name="testScripts.maintenance.createNewWorkorder">
+        <test-method status="FAIL" signature="createWorkorder()[pri:0, instance:testScripts.maintenance.createNewWorkorder@35f983a6]" name="createWorkorder" duration-ms="30084" started-at="2020-01-12T01:22:03Z" finished-at="2020-01-12T01:22:33Z">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[invalid selector: Unable to locate an element with the xpath expression //a[contains(text(),'Dashboards')]dd because of the following error:
-SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//a[contains(text(),'Dashboards')]dd' is not a valid XPath expression.
-  (Session info: chrome=78.0.3904.108)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
-Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T16:15:26.402Z'
-System info: host: 'RPIPL-NB-DL069', ip: '10.13.115.34', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}), userDataDir=C:\Users\RGANPI~1\AppData\Local\Temp\scoped_dir11956_472785249}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:60781}, acceptInsecureCerts=false, browserVersion=78.0.3904.108, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true}]
-Session ID: cc0526012750e1e300eeabf36961837e
-*** Element info: {Using=xpath, value=//a[contains(text(),'Dashboards')]dd}]]>
+              <![CDATA[-----Work Order creation failed------ expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression //a[contains(text(),'Dashboards')]dd because of the following error:
-SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//a[contains(text(),'Dashboards')]dd' is not a valid XPath expression.
-  (Session info: chrome=78.0.3904.108)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
-Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T16:15:26.402Z'
-System info: host: 'RPIPL-NB-DL069', ip: '10.13.115.34', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}), userDataDir=C:\Users\RGANPI~1\AppData\Local\Temp\scoped_dir11956_472785249}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:60781}, acceptInsecureCerts=false, browserVersion=78.0.3904.108, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true}]
-Session ID: cc0526012750e1e300eeabf36961837e
-*** Element info: {Using=xpath, value=//a[contains(text(),'Dashboards')]dd}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:458)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
-	at testScripts.properties.createNewUnit.openDashboards(createNewUnit.java:71)
+              <![CDATA[java.lang.AssertionError: -----Work Order creation failed------ expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at testScripts.maintenance.createNewWorkorder.createWorkorder(createNewWorkorder.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -173,26 +133,39 @@ Session ID: cc0526012750e1e300eeabf36961837e
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.InvalidSelectorException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openDashboards -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:testScripts.properties.createNewUnit@67b64c45]" name="getResult" is-config="true" duration-ms="404" started-at="2019-12-12T01:31:22Z" finished-at="2019-12-12T01:31:22Z">
+        </test-method> <!-- createWorkorder -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:testScripts.maintenance.createNewWorkorder@35f983a6]" name="getResult" is-config="true" duration-ms="608" started-at="2020-01-12T01:22:33Z" finished-at="2020-01-12T01:22:33Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=openDashboards status=FAILURE method=createNewUnit.openDashboards()[pri:0, instance:testScripts.properties.createNewUnit@67b64c45] output={null}]]]>
+                <![CDATA[[TestResult name=createWorkorder status=FAILURE method=createNewWorkorder.createWorkorder()[pri:0, instance:testScripts.maintenance.createNewWorkorder@35f983a6] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:testScripts.properties.createNewUnit@67b64c45]" name="endReport" is-config="true" duration-ms="607" started-at="2019-12-12T01:31:22Z" finished-at="2019-12-12T01:31:23Z">
+      </class> <!-- testScripts.maintenance.createNewWorkorder -->
+      <class name="testScripts.leases.createNewLease">
+        <test-method status="PASS" signature="createLease()[pri:0, instance:testScripts.leases.createNewLease@60f82f98]" name="createLease" duration-ms="31185" started-at="2020-01-12T01:21:31Z" finished-at="2020-01-12T01:22:03Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- endReport -->
-      </class> <!-- testScripts.properties.createNewUnit -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- createLease -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:testScripts.leases.createNewLease@60f82f98]" name="getResult" is-config="true" duration-ms="111" started-at="2020-01-12T01:22:03Z" finished-at="2020-01-12T01:22:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=createLease status=SUCCESS method=createNewLease.createLease()[pri:0, instance:testScripts.leases.createNewLease@60f82f98] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+      </class> <!-- testScripts.leases.createNewLease -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

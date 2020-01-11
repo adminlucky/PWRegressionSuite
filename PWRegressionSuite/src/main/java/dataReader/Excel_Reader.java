@@ -21,8 +21,9 @@ public class Excel_Reader {
 	XSSFRow row;
 	XSSFCell cell;
 	
-	
+	String filepath = System.getProperty("user.dir")+"/src/main/java/testdata/PWData.xlsx";
 	public String readExcel(WebDriver driver, String filepath, String sheetname, int rowNum, int colNum) throws IOException{
+		
 		
 		FileInputStream fis = new FileInputStream(new File(filepath));
 		workbook = new XSSFWorkbook(fis);

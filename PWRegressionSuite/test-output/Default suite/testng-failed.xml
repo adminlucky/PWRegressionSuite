@@ -3,20 +3,19 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="testScripts.properties.createNewUnit"/>
+      <class name="testScripts.maintenance.createNewWorkorder"/>
     </classes>
   </test> <!-- Default test -->
   <test name="Default test(failed)">
     <classes>
-      <class name="testScripts.properties.createNewUnit">
+      <class name="testScripts.maintenance.createNewWorkorder">
         <methods>
+          <include name="reportSetup"/>
+          <include name="tearDown"/>
+          <include name="createWorkorder"/>
           <include name="getResult"/>
-          <include name="openDashboards"/>
-          <include name="clickProperties"/>
-          <include name="startReport"/>
-          <include name="endReport"/>
         </methods>
-      </class> <!-- testScripts.properties.createNewUnit -->
+      </class> <!-- testScripts.maintenance.createNewWorkorder -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
