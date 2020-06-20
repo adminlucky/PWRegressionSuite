@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import pageObjects.Leases.MoveoutAndTerminateLease;
 import pageObjects.Leases.adjustments;
 import pageObjects.Leases.createJE;
+import pageObjects.Leases.newLease;
 import testBase.TestBase;
 
 public class createJETest extends TestBase {
@@ -16,8 +17,8 @@ public class createJETest extends TestBase {
 	public void createNewJE() throws IOException{
 		//test=extent.createTest("createNewJE");
 		initialization();
-		driver.findElement(By.xpath("//a[contains(text(),'Leases')]")).click();
-		driver.findElement(By.xpath("//a[@href=\"javascript:showActive('Active');\"]")).click();
+		newLease.leases().click();
+		newLease.activeLeases().click();
 		MoveoutAndTerminateLease.firstActiveLease().click();
 		adjustments.clickLedger().click();
 		createJE.newJE().click();

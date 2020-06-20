@@ -11,12 +11,23 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import testBase.TestBase;
+import utilities.UtilityMethods;
 
 public class newLease extends TestBase {
 	
 	public static WebElement element = null;
 	public static WebElement vacantUnit;
 	
+	public static WebElement leases(){
+		UtilityMethods.waitForElementToLoad(driver, "//a[contains(text(),'Leases')]");
+		return driver.findElement(By.xpath("//a[contains(text(),'Leases')]"));
+	}
+	public static WebElement activeLeases(){
+		return driver.findElement(By.xpath("//a[@href=\"javascript:showActive('Active');\"]"));
+	}
+	public static WebElement newLeaseLink(){
+		return driver.findElement(By.xpath("//a[contains(text(),'New Lease')]"));
+	}
 	public static WebElement location(){
 		//return driver.findElement(By.xpath("//table[@id='layoutTable']//table[1]//tbody[1]//tr[2]//td[1]//input[1]"));
 		return driver.findElement(By.xpath("//table[@id='layoutTable']//table[1]//tbody[1]//tr[1]//td[1]//input[1]"));

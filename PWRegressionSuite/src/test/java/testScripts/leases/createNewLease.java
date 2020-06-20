@@ -19,9 +19,8 @@ public class createNewLease extends TestBase {
 	public void createLease() throws IOException, InterruptedException{
 		initialization();
 		String filepath = System.getProperty("user.dir")+"/src/main/java/testdata/PWData.xlsx";
-		UtilityMethods.waitForElementToLoad(driver, "//a[contains(text(),'Leases')]");
-		driver.findElement(By.xpath("//a[contains(text(),'Leases')]")).click();
-		driver.findElement(By.xpath("//a[contains(text(),'New Lease')]")).click();
+		newLease.leases().click();
+		newLease.newLeaseLink().click();
 		newLease.location().click();
 		newLease.selectLocation().click();
 		UtilityMethods.waitForElementToBeClickable(driver, "//div[@id='attachUnitForm']//div[@class='primaryButtons']//input[1]");
