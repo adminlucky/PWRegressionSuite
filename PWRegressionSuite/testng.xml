@@ -1,32 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="LeasesSuite" >
-  
-  <!-- <listeners>
-	<listener class-name="utilities.Listeners" />
-  </listeners> -->
-  
-  <test name="Leases regression test">
-  		<packages>
-            <package name="testScripts.leases"/>
-        </packages>
-            <classes>
-            	<class name = "testScripts.leases.newLeaseWithLeaseFormTest">
-	            	<methods>
-	            		<exclude name="createLeaseWithLeaseForm"/>
-	            	</methods>
-            	</class>
-            </classes>
-       
-  
-    <!-- <classes>
-     <class name="testScripts.properties.appendResults"/> 
-     <class name="testScripts.properties.createNewUnit"/>  
-      <class name="testScripts.leases.createNewLease"/> 
-     <class name="testScripts.maintenance.createNewWorkorder"/>	
-    </classes> -->
-    
+<suite name="Suite">
+  <test name="Test">
+    <classes>
+      <class name="testScripts.leases.EditLeaseTest"/>
+      
+    </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
-
-   

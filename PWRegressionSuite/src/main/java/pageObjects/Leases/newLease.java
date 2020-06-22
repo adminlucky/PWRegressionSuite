@@ -6,6 +6,7 @@ import java.util.Date;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -24,6 +25,9 @@ public class newLease extends TestBase {
 	}
 	public static WebElement activeLeases(){
 		return driver.findElement(By.xpath("//a[@href=\"javascript:showActive('Active');\"]"));
+	}
+	public static WebElement draftLeases(){
+		return driver.findElement(By.xpath("//a[@href=\"javascript:showDraft();\"]"));
 	}
 	public static WebElement newLeaseLink(){
 		return driver.findElement(By.xpath("//a[contains(text(),'New Lease')]"));
@@ -56,7 +60,7 @@ public class newLease extends TestBase {
 		return driver.findElement(By.xpath("//div[@id='attachUnitForm']//div[@class='primaryButtons']//input[1]"));
 	}
 	/*public static void status(){
-		new Select(driver.findElement(By.xpath("//select[@id='entity.status']"))).selectByValue("Active");;
+		new Select(driver.findElement(By.xpath("//select[@id='entity.status']"))).selectByValue("Draft");;
 	}*/
 	public static void startCalendar(){
 		WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -78,7 +82,8 @@ public class newLease extends TestBase {
 	public static WebElement addContactButton(){
 		/*element = driver.findElement(By.xpath("//div[@id='contentDiv']//div[1]//input[1]"));
 		Actions actions = new Actions(driver);
-		actions.moveToElement(element).click().build().perform();*/
+		actions.moveToElement(element).doubleClick().build().perform();*/
+		UtilityMethods.waitForElementToLoad(driver, "//div[@id='primaryButtons']//input[3]");
 		element = driver.findElement(By.xpath("//div[@id='contentDiv']//div[1]//input[1]"));
 		//element = driver.findElement(By.xpath("(//div[@id='contentDiv']//div[1]//input[1])[1]"));
 		JavascriptExecutor jse2 = (JavascriptExecutor)driver;
@@ -106,4 +111,7 @@ public class newLease extends TestBase {
 	public static WebElement cancel(){
 		return driver.findElement(By.xpath("//form[1]/div[10]/div[3]/input[2]"));
 	}
+	
+	
+	
 }

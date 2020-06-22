@@ -1,8 +1,6 @@
 package testScripts.leases;
 
 import java.io.IOException;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
@@ -16,6 +14,7 @@ public class createChargeTest extends TestBase {
 	//This test will validate the new charge creation for an active lease 
 	@Test
 	public void createCharge() throws IOException{
+		test=extent.createTest("createCharge");
 		initialization();
 		newLease.leases().click();
 		newLease.activeLeases().click();

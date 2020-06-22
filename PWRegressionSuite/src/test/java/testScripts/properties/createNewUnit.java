@@ -8,9 +8,9 @@ import org.testng.annotations.Test;
 
 import dataReader.Excel_Reader;
 import pageObjects.properties.newUnit;
-import testBase.TestBase;
+import testBase.TestBase1;
 
-public class createNewUnit extends TestBase  {	
+public class createNewUnit extends TestBase1  {	
 	
 	Excel_Reader xlReader = new Excel_Reader();
 		

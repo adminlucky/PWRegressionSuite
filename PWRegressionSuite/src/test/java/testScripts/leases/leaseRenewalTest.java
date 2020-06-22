@@ -9,7 +9,8 @@ import org.testng.annotations.Test;
 import pageObjects.Leases.leaseRenewal;
 import testBase.TestBase;
 
-public class leaseRenewalTest extends TestBase{
+
+public class leaseRenewalTest extends TestBase {
 	@Test
 	public void leaseRenewal() throws IOException{
 		test=extent.createTest("leaseRenewal");

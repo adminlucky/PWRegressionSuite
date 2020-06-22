@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import pageObjects.Leases.LeasesMassUpdate;
 import testBase.TestBase;
 
+
 public class massUpdateTest extends TestBase {
 	@Test
 	public void leasesMassUpdate() throws IOException{

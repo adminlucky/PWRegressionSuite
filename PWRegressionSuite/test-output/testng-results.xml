@@ -2,69 +2,35 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="25156" started-at="2020-06-20T06:57:00Z" finished-at="2020-06-20T06:57:25Z">
+  <suite name="Default suite" duration-ms="23980" started-at="2020-06-22T18:38:18Z" finished-at="2020-06-22T18:38:42Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="25156" started-at="2020-06-20T06:57:00Z" finished-at="2020-06-20T06:57:25Z">
-      <class name="testScripts.leases.createJETest">
-        <test-method status="PASS" signature="reportSetup()[pri:0, instance:testScripts.leases.createJETest@5f2108b5]" name="reportSetup" is-config="true" duration-ms="289" started-at="2020-06-20T12:27:00Z" finished-at="2020-06-20T12:27:00Z">
+    <test name="Default test" duration-ms="23980" started-at="2020-06-22T18:38:18Z" finished-at="2020-06-22T18:38:42Z">
+      <class name="testScripts.leases.PrintLeaseLedger">
+        <test-method status="PASS" signature="reportSetup()[pri:0, instance:testScripts.leases.PrintLeaseLedger@5f2108b5]" name="reportSetup" is-config="true" duration-ms="311" started-at="2020-06-23T00:08:17Z" finished-at="2020-06-23T00:08:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reportSetup -->
-        <test-method status="PASS" signature="createNewJE()[pri:0, instance:testScripts.leases.createJETest@5f2108b5]" name="createNewJE" duration-ms="25120" started-at="2020-06-20T12:27:00Z" finished-at="2020-06-20T12:27:25Z">
+        <test-method status="PASS" signature="printLeaseLedger()[pri:0, instance:testScripts.leases.PrintLeaseLedger@5f2108b5]" name="printLeaseLedger" duration-ms="23937" started-at="2020-06-23T00:08:18Z" finished-at="2020-06-23T00:08:42Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createNewJE -->
-        <test-method status="FAIL" signature="getResult(org.testng.ITestResult)[pri:0, instance:testScripts.leases.createJETest@5f2108b5]" name="getResult" is-config="true" duration-ms="0" started-at="2020-06-20T12:27:25Z" finished-at="2020-06-20T12:27:25Z">
+        </test-method> <!-- printLeaseLedger -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:testScripts.leases.PrintLeaseLedger@5f2108b5]" name="getResult" is-config="true" duration-ms="18" started-at="2020-06-23T00:08:42Z" finished-at="2020-06-23T00:08:42Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=createNewJE status=SUCCESS method=createJETest.createNewJE()[pri:0, instance:testScripts.leases.createJETest@5f2108b5] output={null}]]]>
+                <![CDATA[[TestResult name=printLeaseLedger status=SUCCESS method=PrintLeaseLedger.printLeaseLedger()[pri:0, instance:testScripts.leases.PrintLeaseLedger@5f2108b5] output={null}]]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at testBase.TestBase.getResult(TestBase.java:93)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:216)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:712)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1129)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:746)
-	at org.testng.TestRunner.run(TestRunner.java:600)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1264)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1189)
-	at org.testng.TestNG.runSuites(TestNG.java:1104)
-	at org.testng.TestNG.run(TestNG.java:1076)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="SKIP" signature="tearDown()[pri:0, instance:testScripts.leases.createJETest@5f2108b5]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-06-20T12:27:25Z" finished-at="2020-06-20T12:27:25Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testScripts.leases.PrintLeaseLedger@5f2108b5]" name="tearDown" is-config="true" duration-ms="387" started-at="2020-06-23T00:08:42Z" finished-at="2020-06-23T00:08:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testScripts.leases.createJETest -->
+      </class> <!-- testScripts.leases.PrintLeaseLedger -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

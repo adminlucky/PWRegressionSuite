@@ -2,11 +2,9 @@ package pageObjects.Leases;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
 import testBase.TestBase;
 
-public class createPayment extends TestBase{
-	public static WebElement element = null; 
+public class createPayment extends TestBase {
 	
 	public static WebElement ledger(){
 		return driver.findElement(By.xpath("//li[@id='tab2']"));

@@ -6,8 +6,8 @@ import org.openqa.selenium.WebElement;
 import testBase.TestBase;
 import utilities.UtilityMethods;
 
-public class clearUnpaidCharges extends TestBase 
-{
+public class clearUnpaidCharges extends TestBase {
+	
 	public static WebElement clearUnpaid(){
 		UtilityMethods.scrollDownHalf(driver);
 		return driver.findElement(By.linkText("Clear Unpaid"));

@@ -10,6 +10,7 @@ import pageObjects.Leases.MoveoutAndTerminateLease;
 import pageObjects.Leases.adjustments;
 import testBase.TestBase;
 
+
 public class adjustmentsTest extends TestBase {
 	
 	@Test

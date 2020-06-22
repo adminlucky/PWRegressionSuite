@@ -2,7 +2,6 @@ package pageObjects.Leases;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
 import testBase.TestBase;
 
 

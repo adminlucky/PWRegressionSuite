@@ -1,8 +1,6 @@
 package testScripts.leases;
 
 import java.io.IOException;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
@@ -15,7 +13,7 @@ public class createPaymentTest extends TestBase {
 
 	@Test
 	public void createPayment() throws IOException{
-		//test=extent.createTest("createPayment");
+		test=extent.createTest("createPayment");
 		initialization();
 		newLease.leases().click();
 		newLease.activeLeases().click();

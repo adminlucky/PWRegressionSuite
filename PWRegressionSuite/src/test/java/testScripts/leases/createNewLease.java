@@ -2,10 +2,11 @@ package testScripts.leases;
 
 import java.io.IOException;
 
-import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
 import dataReader.Excel_Reader;
+import pageObjects.Leases.AddAutoCharge;
 import pageObjects.Leases.newLease;
 import testBase.TestBase;
 import utilities.UtilityMethods;
@@ -27,7 +28,7 @@ public class createNewLease extends TestBase {
 		newLease.done().click();
 		
 		//UtilityMethods.waitForElementToBeClickable(driver, "//select[@id='leaseFormSelect']");
-		//newLease.status(driver);
+		//newLease.status();
 		newLease.startCalendar();
 		newLease.endDate();
 		newLease.publicAssistance();
@@ -40,6 +41,11 @@ public class createNewLease extends TestBase {
 		String email=xlReader.readExcel(driver,filepath,"Leases",1,2);
 		newLease.email().sendKeys(email);
 		newLease.saveNewContact().click();
+		AddAutoCharge.newAutoCharge().click();
+		AddAutoCharge.startDate();
+		AddAutoCharge.amount().sendKeys(Keys.chord(Keys.CONTROL, "a"), "$600");
+		AddAutoCharge.desc().sendKeys("Rent auto charge");
+		AddAutoCharge.save().click();
 		UtilityMethods.scrollDown(driver);
 		newLease.saveLease().click();
 		UtilityMethods.waitForElementToLoad(driver, "//form[1]/div[10]/div[3]/input[2]");

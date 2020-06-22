@@ -12,10 +12,11 @@ import pageObjects.Leases.createJE;
 import pageObjects.Leases.newLease;
 import testBase.TestBase;
 
+
 public class createJETest extends TestBase {
 	@Test
 	public void createNewJE() throws IOException{
-		//test=extent.createTest("createNewJE");
+		test=extent.createTest("createNewJE");
 		initialization();
 		newLease.leases().click();
 		newLease.activeLeases().click();

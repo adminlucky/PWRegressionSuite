@@ -1,10 +1,8 @@
 package testScripts.leases;
 
 import java.io.IOException;
-
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
-
 import dataReader.Excel_Reader;
 import pageObjects.Leases.newLeaseWithLeaseForm;
 import testBase.TestBase;

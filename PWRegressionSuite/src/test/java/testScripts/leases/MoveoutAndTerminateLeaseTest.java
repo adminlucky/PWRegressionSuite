@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import pageObjects.Leases.MoveoutAndTerminateLease;
 import testBase.TestBase;
 
+
 public class MoveoutAndTerminateLeaseTest extends TestBase {
 
 	@Test

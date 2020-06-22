@@ -6,10 +6,9 @@ import java.util.Date;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-
 import testBase.TestBase;
 
-public class createCharge extends TestBase{
+public class createCharge extends TestBase {
 	public static WebElement element = null; 
 	
 	public static WebElement clickLedger(){

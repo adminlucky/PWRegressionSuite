@@ -7,10 +7,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import pageObjects.Maintenance.newWorkorder;
-import testBase.TestBase;
+import testBase.TestBase1;
 import utilities.UtilityMethods;
 
-public class createNewWorkorder extends TestBase {
+public class createNewWorkorder extends TestBase1 {
 	
 	@Test
 	public void createWorkorder() throws IOException {
