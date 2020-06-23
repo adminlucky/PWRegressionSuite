@@ -26,7 +26,7 @@ public class LeaseNewWorkorder extends TestBase {
 	public static void woCategory(){
 		(new Select(driver.findElement(By.xpath("//select[@name='entity.category']")))).selectByVisibleText("Move In Maintenance");
 	}
-	public static WebElement estimatedCose(){
+	public static WebElement estimatedCost(){
 		return driver.findElement(By.xpath("//input[@name='entity.costEstimateAsString']"));
 	}
 	public static WebElement description(){

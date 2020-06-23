@@ -1,8 +1,6 @@
 package testScripts.leases;
 
 import java.io.IOException;
-
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import pageObjects.Leases.EditLease;

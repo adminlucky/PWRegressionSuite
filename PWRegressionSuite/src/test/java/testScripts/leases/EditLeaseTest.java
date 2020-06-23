@@ -3,9 +3,7 @@ package testScripts.leases;
 import java.io.IOException;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
-
 import pageObjects.Leases.EditLease;
-import pageObjects.Leases.MoveoutAndTerminateLease;
 import pageObjects.Leases.newLease;
 import testBase.TestBase;
 
@@ -18,7 +16,7 @@ public class EditLeaseTest extends TestBase {
 	initialization();
 	newLease.leases().click();
 	newLease.activeLeases().click();
-	MoveoutAndTerminateLease.firstActiveLease().click();
+	EditLease.firstLease().click();
 	EditLease.edit().click();
 	EditLease.activeToEviction();
 	EditLease.publicAssistance();

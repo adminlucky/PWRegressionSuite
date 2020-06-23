@@ -2,35 +2,35 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="23980" started-at="2020-06-22T18:38:18Z" finished-at="2020-06-22T18:38:42Z">
+  <suite name="Default suite" duration-ms="24142" started-at="2020-06-23T17:58:52Z" finished-at="2020-06-23T17:59:16Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="23980" started-at="2020-06-22T18:38:18Z" finished-at="2020-06-22T18:38:42Z">
-      <class name="testScripts.leases.PrintLeaseLedger">
-        <test-method status="PASS" signature="reportSetup()[pri:0, instance:testScripts.leases.PrintLeaseLedger@5f2108b5]" name="reportSetup" is-config="true" duration-ms="311" started-at="2020-06-23T00:08:17Z" finished-at="2020-06-23T00:08:18Z">
+    <test name="Default test" duration-ms="24142" started-at="2020-06-23T17:58:52Z" finished-at="2020-06-23T17:59:16Z">
+      <class name="testScripts.leases.createWOFromMaintTabTest">
+        <test-method status="PASS" signature="reportSetup()[pri:0, instance:testScripts.leases.createWOFromMaintTabTest@5f2108b5]" name="reportSetup" is-config="true" duration-ms="232" started-at="2020-06-23T23:28:52Z" finished-at="2020-06-23T23:28:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reportSetup -->
-        <test-method status="PASS" signature="printLeaseLedger()[pri:0, instance:testScripts.leases.PrintLeaseLedger@5f2108b5]" name="printLeaseLedger" duration-ms="23937" started-at="2020-06-23T00:08:18Z" finished-at="2020-06-23T00:08:42Z">
+        <test-method status="PASS" signature="newWorkorderFromMaintTab()[pri:0, instance:testScripts.leases.createWOFromMaintTabTest@5f2108b5]" name="newWorkorderFromMaintTab" duration-ms="24109" started-at="2020-06-23T23:28:52Z" finished-at="2020-06-23T23:29:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- printLeaseLedger -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:testScripts.leases.PrintLeaseLedger@5f2108b5]" name="getResult" is-config="true" duration-ms="18" started-at="2020-06-23T00:08:42Z" finished-at="2020-06-23T00:08:42Z">
+        </test-method> <!-- newWorkorderFromMaintTab -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:testScripts.leases.createWOFromMaintTabTest@5f2108b5]" name="getResult" is-config="true" duration-ms="13" started-at="2020-06-23T23:29:16Z" finished-at="2020-06-23T23:29:16Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=printLeaseLedger status=SUCCESS method=PrintLeaseLedger.printLeaseLedger()[pri:0, instance:testScripts.leases.PrintLeaseLedger@5f2108b5] output={null}]]]>
+                <![CDATA[[TestResult name=newWorkorderFromMaintTab status=SUCCESS method=createWOFromMaintTabTest.newWorkorderFromMaintTab()[pri:0, instance:testScripts.leases.createWOFromMaintTabTest@5f2108b5] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testScripts.leases.PrintLeaseLedger@5f2108b5]" name="tearDown" is-config="true" duration-ms="387" started-at="2020-06-23T00:08:42Z" finished-at="2020-06-23T00:08:42Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testScripts.leases.createWOFromMaintTabTest@5f2108b5]" name="tearDown" is-config="true" duration-ms="323" started-at="2020-06-23T23:29:16Z" finished-at="2020-06-23T23:29:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testScripts.leases.PrintLeaseLedger -->
+      </class> <!-- testScripts.leases.createWOFromMaintTabTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

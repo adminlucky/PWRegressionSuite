@@ -19,4 +19,5 @@ public class NewLeaseFromLeasePage extends TestBase {
 		return driver.findElement(By.xpath("//a[contains(text(),'New Lease')]"));
 	}
 	
+	
 }

@@ -2,14 +2,10 @@ package pageObjects.Leases;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import testBase.TestBase;
-import utilities.UtilityMethods;
+
 
 public class AddAutoCharge extends TestBase {
 	

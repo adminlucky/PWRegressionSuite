@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 
 import pageObjects.Leases.EditLease;
 import pageObjects.Leases.LeaseNewWorkorder;
-import pageObjects.Leases.MoveoutAndTerminateLease;
 import pageObjects.Leases.newLease;
 import testBase.TestBase;
 import utilities.UtilityMethods;
@@ -30,7 +29,7 @@ public class LeaseNewWorkorderTest extends TestBase {
 	
 	LeaseNewWorkorder.woType();
 	LeaseNewWorkorder.woCategory();
-	LeaseNewWorkorder.estimatedCose().sendKeys(Keys.chord(Keys.CONTROL, "a"), "$25");
+	LeaseNewWorkorder.estimatedCost().sendKeys(Keys.chord(Keys.CONTROL, "a"), "$25");
 	LeaseNewWorkorder.description().sendKeys("Work order created from lease");
 	LeaseNewWorkorder.saveWO().click();
 	

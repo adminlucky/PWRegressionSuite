@@ -1,12 +1,8 @@
 package testScripts.leases;
 
 import java.io.IOException;
-import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
-
 import pageObjects.Leases.DeleteLease;
-import pageObjects.Leases.EditLease;
-import pageObjects.Leases.MoveoutAndTerminateLease;
 import pageObjects.Leases.newLease;
 import testBase.TestBase;
 

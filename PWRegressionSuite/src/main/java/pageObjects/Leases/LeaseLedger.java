@@ -16,6 +16,10 @@ public class LeaseLedger extends TestBase {
 	public static WebElement closeWindow(){
 		return driver.findElement(By.xpath("//a[contains(text(),'Close Window')]"));
 	}
-	
-	
+	public static WebElement moveOut(){
+		return driver.findElement(By.xpath("//input[@class='button redBack']"));
+	}
+	public static WebElement lateFee(){
+		return driver.findElement(By.xpath("//input[@value='Late Fee']"));
+	}
 }

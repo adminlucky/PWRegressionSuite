@@ -11,6 +11,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -29,10 +30,10 @@ public class UtilityMethods {
 		return destination;
 	}
 	
-	public static void waitForElementToLoad(WebDriver driver, String xpathLocator){
-		
+	//improved on 06/23/2020
+	public static WebElement waitForElementToLoad(WebDriver driver, String xpathLocator){
 		WebDriverWait wait=new WebDriverWait(driver, 20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathLocator)));
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathLocator)));
 	}
 	
 	// Need to generalize for all the locator types
