@@ -10,15 +10,17 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-
 import dataReader.config_Reader;
+import pageObjects.Leases.newLease;
 import utilities.UtilityMethods;
 
 public class TestBase extends config_Reader {
@@ -44,16 +46,12 @@ public class TestBase extends config_Reader {
 			System.setProperty("webdriver.ie.driver", rootDir+ "/Drivers/IEDriverServer.exe");
 			driver = new InternetExplorerDriver();
 		}
-		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
-		driver.get(prop.getProperty("url"));
-		driver.findElement(By.name("email")).sendKeys(prop.getProperty("username"));
-		driver.findElement(By.name("password")).sendKeys(prop.getProperty("password"));
-		driver.findElement(By.xpath("//*[@id=\"main-content\"]/aside/div/form/input[2]")).click();
+		
+		LoginPW.loginPW();
 	}
 	
 	@BeforeSuite
-	public void reportSetup(){
+	public void reportSetup() throws IOException{
 		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/Reports/myReport.html");
 		htmlReporter.config().setDocumentTitle("Automation Report");
 		htmlReporter.config().setReportName("Regression Testing");
@@ -64,12 +62,17 @@ public class TestBase extends config_Reader {
 		extent.setSystemInfo("Host name" , "Propertyware");
 		extent.setSystemInfo("Environment", "SAT");
 		extent.setSystemInfo("User","Krishna");
+		initialization();
 	}
-	/*@BeforeMethod()
+	/*@BeforeTest
+	public void init() throws IOException{
+		
+	}*/
+	/*@BeforeMethod
 	public void NamingTest(Method mtd){
 		test=extent.createTest(mtd.getName());
-		test.createNode(mtd.getName());
-	}*/
+		test.createNode(mtd.getName());*/
+	
 	
 	@AfterMethod
 	public void getResult(ITestResult result) throws IOException  {
@@ -81,6 +84,9 @@ public class TestBase extends config_Reader {
 			 driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 			 String screenshotPath = UtilityMethods.takeScreenshot(driver, result.getName());
 			 test.addScreenCaptureFromPath(screenshotPath);
+			 //added for betterment
+			 //driver.close();
+			 //initialization();
 			 }
 			else if(result.getStatus() == ITestResult.STARTED){
 				test.info("Test started");
@@ -91,8 +97,9 @@ public class TestBase extends config_Reader {
 			 }
 			 else if(result.getStatus() == ITestResult.SUCCESS){
 				 test.log(Status.PASS, "Test Case passed is: "+result.getName());
-			}
+			  }
 			
+			 //newLease.leases().click();
 			//driver.close();
 	}
 	@AfterSuite

@@ -24,7 +24,7 @@ public class TerminateLeaseTest extends TestBase {
 	EditLease.publicAssistance();
 	EditLease.description().sendKeys(Keys.END, " - Lease status changed from Active to Terminated");
 	EditLease.vacatedDate();
-	EditLease.save().click();
+	EditLease.save();
 	EditLease.confirmTerminate();
 	}
 }

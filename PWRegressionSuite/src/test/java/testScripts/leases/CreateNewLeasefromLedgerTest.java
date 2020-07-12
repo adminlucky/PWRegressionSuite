@@ -27,14 +27,14 @@ public class CreateNewLeasefromLedgerTest extends TestBase {
 		newLease.location().click();
 		newLease.selectLocation().click();
 		UtilityMethods.waitForElementToBeClickable(driver, "//div[@id='attachUnitForm']//div[@class='primaryButtons']//input[1]");
-		newLease.done().click();
+		newLease.done();
 		
 		//UtilityMethods.waitForElementToBeClickable(driver, "//select[@id='leaseFormSelect']");
 		//newLease.status();
 		newLease.startCalendar();
 		newLease.endDate();
 		newLease.publicAssistance();
-		newLease.addContactButton().click();
+		newLease.addContactButton();
 		newLease.createNewContactButton().click();
 		String fname=xlReader.readExcel(driver,filepath,"Leases",1,0);
 		newLease.firstname().sendKeys(fname);
@@ -42,11 +42,10 @@ public class CreateNewLeasefromLedgerTest extends TestBase {
 		newLease.lastname().sendKeys(lname);
 		String email=xlReader.readExcel(driver,filepath,"Leases",1,2);
 		newLease.email().sendKeys(email);
-		newLease.saveNewContact().click();
+		newLease.saveNewContact();
 		UtilityMethods.scrollDown(driver);
-		newLease.saveLease().click();
-		UtilityMethods.waitForElementToLoad(driver, "//form[1]/div[10]/div[3]/input[2]");
-		newLease.cancel().click();
+		newLease.saveLease();
+		newLease.cancel();
 	}
 
 }

@@ -24,7 +24,7 @@ public class EditLeaseTest extends TestBase {
 	//EditLease.description().sendKeys(Keys.chord(Keys.CONTROL, "a"), "Description updated");	
 	//text append
 	EditLease.description().sendKeys(Keys.END, " - Lease status changed from Active to Eviction");
-	EditLease.save().click();
+	EditLease.save();
 	EditLease.restrictionsSave().click();
 	}
 }

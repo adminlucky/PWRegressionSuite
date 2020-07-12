@@ -26,8 +26,8 @@ public class DraftToActiveTest extends TestBase {
 	EditLease.inspectionStartDate();	//Need to improve
 	EditLease.costEstimate().sendKeys(Keys.chord(Keys.CONTROL, "a"),"$40");
 	EditLease.inspectionDesc().sendKeys("Sample Inspection");
-	EditLease.save().click();
-	newLease.cancel().click();
+	EditLease.save();
+	newLease.cancel();
 	
 	}
 }

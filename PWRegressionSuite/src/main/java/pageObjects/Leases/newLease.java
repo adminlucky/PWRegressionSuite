@@ -5,6 +5,7 @@ import java.util.Date;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -20,8 +21,8 @@ public class newLease extends TestBase {
 	public static WebElement vacantUnit;
 	
 	public static WebElement leases(){
-		UtilityMethods.waitForElementToLoad(driver, "//a[contains(text(),'Leases')]");
-		return driver.findElement(By.xpath("//a[contains(text(),'Leases')]"));
+		UtilityMethods.waitForElementToBeClickable(driver, "//div[3]/div[2]/div[2]/ul[1]/li[5]/a[1]");
+		return driver.findElement(By.xpath("//div[3]/div[2]/div[2]/ul[1]/li[5]/a[1]"));
 	}
 	public static WebElement activeLeases(){
 		return driver.findElement(By.xpath("//a[@href=\"javascript:showActive('Active');\"]"));
@@ -56,8 +57,10 @@ public class newLease extends TestBase {
 	}
 	
 	
-	public static WebElement done(){
-		return driver.findElement(By.xpath("//div[@id='attachUnitForm']//div[@class='primaryButtons']//input[1]"));
+	public static void done(){
+		UtilityMethods.waitForElementToBeClickable(driver, "//div[@id='attachUnitForm']//div[@class='primaryButtons']//input[1]");
+		driver.findElement(By.xpath("//div[@id='attachUnitForm']//div[@class='primaryButtons']//input[1]")).click();
+		UtilityMethods.waitForElementToBeInvisible(driver, "//div[@id='attachUnitForm']");
 	}
 	/*public static void status(){
 		new Select(driver.findElement(By.xpath("//select[@id='entity.status']"))).selectByValue("Draft");;
@@ -72,23 +75,27 @@ public class newLease extends TestBase {
 		return driver.findElement(By.xpath("//a[@id=' pk121719']"));
 	}*/
 	public static void endDate(){
-		(new Select(driver.findElement(By.xpath("//select[@id='leaseFormSelect']")))).selectByValue("5");
-		//(new Select(driver.findElement(By.xpath("//select[@id='leaseFormSelect']")))).selectByIndex(5);
+		//(new Select(driver.findElement(By.xpath("//select[@id='leaseFormSelect']")))).selectByValue("5");
+		(new Select(driver.findElement(By.xpath("//select[@id='leaseFormSelect']")))).selectByIndex(5);
 	}
 	public static void publicAssistance(){
 		//UtilityMethods.waitForElementToBeInvisible(driver,"//input[@name='entity.startDateAsString']");
 		(new Select(driver.findElement(By.xpath("//select[@name='entity.publicAssistanceProgram']")))).selectByVisibleText("Section 8");
 	}
-	public static WebElement addContactButton(){
-		/*element = driver.findElement(By.xpath("//div[@id='contentDiv']//div[1]//input[1]"));
-		Actions actions = new Actions(driver);
-		actions.moveToElement(element).doubleClick().build().perform();*/
-		UtilityMethods.waitForElementToLoad(driver, "//div[@id='primaryButtons']//input[3]");
-		element = driver.findElement(By.xpath("//div[@id='contentDiv']//div[1]//input[1]"));
-		//element = driver.findElement(By.xpath("(//div[@id='contentDiv']//div[1]//input[1])[1]"));
-		JavascriptExecutor jse2 = (JavascriptExecutor)driver;
-		jse2.executeScript("arguments[0].scrollIntoView()", element);
-		return element;
+	//Clicked twice before throwing exception
+	public static void addContactButton(){
+		int attempts = 0;
+	    while(attempts < 2) {
+	        try {
+	        	driver.findElement(By.xpath("//div[@id='contentDiv']//div[1]//input[1]")).click();
+	            break;
+	        } catch(StaleElementReferenceException e) {
+	        }
+	        attempts++;
+	    }
+	    //(new WebDriverWait(driver, 5)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='contentDiv']//div[1]//input[1]")));
+	    (new WebDriverWait(driver, 5)).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='contentDiv']//div[1]//input[1]")));
+	    driver.findElement(By.xpath("//div[@id='contentDiv']//div[1]//input[1]")).click();
 	}
 	public static WebElement createNewContactButton(){
 		return driver.findElement(By.xpath("//div[@id='primaryButtons']//input[3]"));
@@ -102,14 +109,17 @@ public class newLease extends TestBase {
 	public static WebElement email(){
 		return driver.findElement(By.xpath("//input[@id='leaseContact.email']"));
 	}
-	public static WebElement saveNewContact(){
-		return driver.findElement(By.xpath("//div[@id='editContactForm']//div[@class='primaryButtons']//input[1]"));
+	public static void saveNewContact(){
+		driver.findElement(By.xpath("//div[@id='editContactForm']//div[@class='primaryButtons']//input[1]")).click();
+		UtilityMethods.waitForElementToBeInvisible(driver, "//div[@id='editContactForm']");
 	}
-	public static WebElement saveLease(){
-		return driver.findElement(By.xpath("(//input[@value='Save'])[2]"));
+	public static void saveLease(){
+		driver.findElement(By.xpath("(//input[@value='Save'])[2]")).click();
+		UtilityMethods.waitForElementToLoad(driver, "//form[1]/div[10]/div[3]/input[2]");
 	}
-	public static WebElement cancel(){
-		return driver.findElement(By.xpath("//form[1]/div[10]/div[3]/input[2]"));
+	public static void cancel(){
+		driver.findElement(By.xpath("//*[@id='moveInForm']/div[3]/input[2]")).click();
+		UtilityMethods.waitForElementToBeInvisible(driver, "//div[@id='moveInForm']");
 	}
 	
 	

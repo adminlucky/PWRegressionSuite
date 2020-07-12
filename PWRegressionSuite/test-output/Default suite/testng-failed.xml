@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testScripts.leases.createWOFromMaintTabTest">
+      <class name="testScripts.leases.createNewLease">
         <methods>
+          <include name="createLease"/>
           <include name="reportSetup"/>
           <include name="tearDown"/>
-          <include name="newWorkorderFromMaintTab"/>
           <include name="getResult"/>
         </methods>
-      </class> <!-- testScripts.leases.createWOFromMaintTabTest -->
+      </class> <!-- testScripts.leases.createNewLease -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

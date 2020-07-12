@@ -12,6 +12,7 @@ import testBase.TestBase;
 public class massUpdateTest extends TestBase {
 	@Test
 	public void leasesMassUpdate() throws IOException{
+		test=extent.createTest("leasesMassUpdate");
 		initialization();
 		driver.findElement(By.xpath("//a[contains(text(),'Leases')]")).click();
 		LeasesMassUpdate.gridEdit().click();

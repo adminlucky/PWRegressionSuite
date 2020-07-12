@@ -4,12 +4,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import testBase.TestBase;
+import utilities.UtilityMethods;
 
 
 public class adjustments extends TestBase {
 	
 	public static WebElement clickLedger(){
-		return driver.findElement(By.xpath("//li[@id='tab2']"));
+		//return driver.findElement(By.xpath("//li[@id='tab2']"));
+		return driver.findElement(By.xpath("//table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/ul[1]/li[1]/ul[1]/li[2]"));
 	}
 	public static WebElement adjustmentsButton(){
 		return driver.findElement(By.xpath("//div[@class='primaryButtons']//input[3]"));
@@ -28,8 +30,9 @@ public class adjustments extends TestBase {
 	public static WebElement comment(){
 		return driver.findElement(By.xpath("//input[@name='refund.comments']"));
 	}
-	public static WebElement save(){
-		return driver.findElement(By.xpath("//form[1]/div[10]/div[4]/input[1]"));
+	public static void save(){
+		driver.findElement(By.xpath("//form[1]/div[10]/div[4]/input[1]")).click();
+		UtilityMethods.waitForElementToBeInvisible(driver, "//div[@id='editRefundFormContainer']");
 	}
 	
 	//Discount related object locators

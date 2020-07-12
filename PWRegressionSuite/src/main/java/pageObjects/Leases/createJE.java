@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import testBase.TestBase;
+import utilities.UtilityMethods;
 
 
 public class createJE extends TestBase {
@@ -29,7 +30,8 @@ public class createJE extends TestBase {
 	public static WebElement creditAmount(){
 		return driver.findElement(By.xpath("//input[@id='jeSplit(1).crAsString']"));
 	}
-	public static WebElement saveJE(){
-		return driver.findElement(By.xpath("//input[@id='saveje']"));
+	public static void saveJE(){
+		driver.findElement(By.xpath("//input[@id='saveje']")).click();
+		UtilityMethods.waitForElementToBeInvisible(driver, "//div[@id='editRefundFormContainer']");
 	}
 }

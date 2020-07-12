@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import testBase.TestBase;
+import utilities.UtilityMethods;
 
 public class EditLease extends TestBase {
 	
@@ -37,8 +38,9 @@ public class EditLease extends TestBase {
 	public static WebElement description(){
 		return driver.findElement(By.xpath("//textarea[@name='entity.comments']"));
 	}
-	public static WebElement save(){
-		return driver.findElement(By.xpath("(//input[@onclick='save()'])[1]"));
+	public static void save(){
+		driver.findElement(By.xpath("(//input[@onclick='save()'])[1]")).click();
+		UtilityMethods.waitForElementToBeInvisible(driver, "//form[@id='leaseEditForm']");
 	}
 	public static WebElement restrictionsSave(){
 		return driver.findElement(By.xpath("(//input[@value='Save'])[4]"));

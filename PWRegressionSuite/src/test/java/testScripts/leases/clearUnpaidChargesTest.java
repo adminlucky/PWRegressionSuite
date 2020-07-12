@@ -13,6 +13,7 @@ import testBase.TestBase;
 public class clearUnpaidChargesTest extends TestBase {
 	@Test
 	public void clearUnpaidCharges() throws IOException{
+		test=extent.createTest("clearUnpaidCharges");
 		initialization();
 		driver.findElement(By.xpath("//a[contains(text(),'Leases')]")).click();
 		driver.findElement(By.xpath("//a[@href=\"javascript:showActive('Active');\"]a")).click();

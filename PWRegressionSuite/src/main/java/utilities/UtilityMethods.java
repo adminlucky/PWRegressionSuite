@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Random;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
@@ -32,14 +33,15 @@ public class UtilityMethods {
 	
 	//improved on 06/23/2020
 	public static WebElement waitForElementToLoad(WebDriver driver, String xpathLocator){
-		WebDriverWait wait=new WebDriverWait(driver, 20);
+		WebDriverWait wait=new WebDriverWait(driver, 10);
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathLocator)));
+		
 	}
 	
 	// Need to generalize for all the locator types
 	public static void waitForElementToBeClickable(WebDriver driver, String xpathLocator){
 		
-		WebDriverWait wait=new WebDriverWait(driver, 5);
+		WebDriverWait wait=new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpathLocator)));
 		
 		// Less preferred option
@@ -64,6 +66,16 @@ public class UtilityMethods {
 	public static void scrollDown(WebDriver driver){
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+	}
+	public static void pageRefresh(WebDriver driver){
+		driver.navigate().refresh();
+	}
+	
+	
+	public static int randomNumber(){
+		Random rand = new Random(); 
+		// Generate random integers in range 0 to 9999 
+        return rand.nextInt(10000); 
 	}
 }
 

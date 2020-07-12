@@ -4,6 +4,7 @@ import java.io.IOException;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 import dataReader.Excel_Reader;
+import pageObjects.Leases.newLease;
 import pageObjects.Leases.newLeaseWithLeaseForm;
 import testBase.TestBase;
 import utilities.UtilityMethods;
@@ -13,7 +14,8 @@ public class newLeaseWithLFAndExistingContactTest extends TestBase {
 Excel_Reader xlReader = new Excel_Reader();
 	
 	@Test
-	public void createLeaseWithLeaseForm() throws IOException, InterruptedException{
+	public void createLeaseWithLFAndExistingContact() throws IOException, InterruptedException{
+		test=extent.createTest("createLeaseWithLFAndExistingContact");
 		initialization();
 		String filepath = System.getProperty("user.dir")+"/src/main/java/testdata/PWData.xlsx";
 		UtilityMethods.waitForElementToLoad(driver, "//a[contains(text(),'Leases')]");
@@ -28,7 +30,8 @@ Excel_Reader xlReader = new Excel_Reader();
 		newLeaseWithLeaseForm.startCalendar();
 		newLeaseWithLeaseForm.endDate();
 		newLeaseWithLeaseForm.publicAssistance();
-		newLeaseWithLeaseForm.addContactButton().click();
+		//newLeaseWithLeaseForm.addContactButton().click();
+		newLease.addContactButton();
 		newLeaseWithLeaseForm.createNewContactButton().click();
 		String fname=xlReader.readExcel(driver,filepath,"Leases",1,0);
 		newLeaseWithLeaseForm.firstname().sendKeys(fname);

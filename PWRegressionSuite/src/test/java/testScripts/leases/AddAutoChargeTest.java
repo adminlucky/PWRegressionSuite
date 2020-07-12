@@ -6,26 +6,33 @@ import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 import pageObjects.Leases.AddAutoCharge;
 import pageObjects.Leases.EditLease;
+import pageObjects.Leases.Login;
 import pageObjects.Leases.MoveoutAndTerminateLease;
+import pageObjects.Leases.NewLeaseFromLeasePage;
 import pageObjects.Leases.newLease;
 import testBase.TestBase;
+import utilities.UtilityMethods;
 
 
 public class AddAutoChargeTest extends TestBase {
 	
 	@Test
-	public void addAutoCharge() throws IOException{
+	public void addAutoCharge() throws IOException, InterruptedException{
 	test=extent.createTest("addAutoCharge");
-	initialization();
+	//initialization();
+	Login.refreshPage();
+	Login.homePage().click();
 	newLease.leases().click();
 	newLease.activeLeases().click();
 	MoveoutAndTerminateLease.firstActiveLease().click();
+	NewLeaseFromLeasePage.leaseSummaryLink().click();
 	EditLease.edit().click();
 	AddAutoCharge.newAutoCharge().click();
 	AddAutoCharge.startDate();
-	AddAutoCharge.amount().sendKeys(Keys.chord(Keys.CONTROL, "a"),"600");
+	AddAutoCharge.amount().sendKeys(Keys.chord(Keys.CONTROL, "a"));
+	AddAutoCharge.amount().sendKeys("900");
 	AddAutoCharge.desc().sendKeys("Monthly Rent auto charge");
-	AddAutoCharge.save().click();
-	EditLease.save().click();	
+	AddAutoCharge.save();
+	EditLease.save();	
 	}
 }

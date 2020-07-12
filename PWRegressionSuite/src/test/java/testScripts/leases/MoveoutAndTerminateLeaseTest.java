@@ -6,17 +6,18 @@ import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 import pageObjects.Leases.MoveoutAndTerminateLease;
+import pageObjects.Leases.newLease;
 import testBase.TestBase;
 
 
 public class MoveoutAndTerminateLeaseTest extends TestBase {
 
 	@Test
-	public void moveoutAndTerminate() throws IOException{
+	public void moveoutAndTerminateLease() throws IOException{
+		test=extent.createTest("moveoutAndTerminateLease");
 		initialization();
-		//UtilityMethods.waitForElementToLoad(driver, "//a[contains(text(),'Leases')]");
-		driver.findElement(By.xpath("//a[contains(text(),'Leases')]")).click();
-		driver.findElement(By.xpath("//a[@href=\"javascript:showActive('Active');\"]")).click();
+		newLease.leases().click();
+		newLease.activeLeases().click();
 		MoveoutAndTerminateLease.firstActiveLease().click();
 		MoveoutAndTerminateLease.moveOutLink().click();
 		MoveoutAndTerminateLease.startCalendar();
