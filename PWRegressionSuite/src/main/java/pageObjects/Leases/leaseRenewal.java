@@ -7,10 +7,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import testBase.TestBase;
+import utilities.UtilityMethods;
 
 
 public class leaseRenewal extends TestBase {
 	
+
+	public static WebElement terminatedLeases(){
+		return driver.findElement(By.xpath("//a[@href=\"javascript:showTerminated( 'Terminated' );\"]"));
+	}
 	public static WebElement firstTerminatedLease(){
 		return driver.findElement(By.xpath("//td[@id='cell_0_0']//self::a"));
 	}
@@ -29,7 +34,8 @@ public class leaseRenewal extends TestBase {
 		String date = new SimpleDateFormat("MM/dd/yyyy").format(new Date());
 		driver.findElement(By.xpath("//input[@id='renewalOnDate']")).sendKeys(date);
 	}
-	public static WebElement save(){
-		return driver.findElement(By.xpath("//div[10]/div[3]/input[1]"));
+	public static void save(){
+		driver.findElement(By.xpath("//div[10]/div[3]/input[1]")).click();
+		UtilityMethods.waitForElementToBeInvisible(driver, "//*[@id='editLeaseRenewalContainer']");
 	}
 }

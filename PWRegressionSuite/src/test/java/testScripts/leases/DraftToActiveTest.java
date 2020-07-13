@@ -5,6 +5,7 @@ import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
 import pageObjects.Leases.EditLease;
+import pageObjects.Leases.Login;
 import pageObjects.Leases.newLease;
 import testBase.TestBase;
 
@@ -12,9 +13,10 @@ import testBase.TestBase;
 public class DraftToActiveTest extends TestBase {
 	
 	@Test
-	public void editLease() throws IOException{
+	public void editLease() throws IOException, InterruptedException{
 	test=extent.createTest("editLease");
-	initialization();
+	Login.refreshPage();
+	Login.homePage().click();
 	newLease.leases().click();
 	newLease.draftLeases().click();
 	EditLease.firstLease().click();
@@ -26,7 +28,7 @@ public class DraftToActiveTest extends TestBase {
 	EditLease.inspectionStartDate();	//Need to improve
 	EditLease.costEstimate().sendKeys(Keys.chord(Keys.CONTROL, "a"),"$40");
 	EditLease.inspectionDesc().sendKeys("Sample Inspection");
-	EditLease.save();
+	EditLease.saveLease();
 	newLease.cancel();
 	
 	}

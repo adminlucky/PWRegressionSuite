@@ -5,6 +5,9 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import testBase.TestBase;
 import utilities.UtilityMethods;
 
@@ -42,7 +45,8 @@ public class Login extends TestBase {
 		
 	}
 	public static void refreshPage() throws InterruptedException{
-		UtilityMethods.waitForElementToLoad(driver, "//div[3]/div[2]/div[2]/ul[1]/li[1]/a[1]");
+		//UtilityMethods.waitForElementToLoad(driver, "//div[3]/div[2]/div[2]/ul[1]/li[1]/a[1]");
+		(new WebDriverWait(driver, 15)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[3]/div[2]/div[2]/ul[1]/li[1]/a[1]")));
 		driver.navigate().refresh();
 		try{
 			if (driver.switchTo().alert() != null){

@@ -4,16 +4,19 @@ import java.io.IOException;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 import pageObjects.Leases.EditLease;
+import pageObjects.Leases.Login;
 import pageObjects.Leases.newLease;
 import testBase.TestBase;
 
 
 public class EditLeaseTest extends TestBase {
 	
+	//Editing lease details and making lease Evicted
 	@Test
-	public void editLease() throws IOException{
+	public void editLease() throws IOException, InterruptedException{
 	test=extent.createTest("editLease");
-	initialization();
+	Login.refreshPage();
+	Login.homePage().click();
 	newLease.leases().click();
 	newLease.activeLeases().click();
 	EditLease.firstLease().click();
@@ -24,7 +27,7 @@ public class EditLeaseTest extends TestBase {
 	//EditLease.description().sendKeys(Keys.chord(Keys.CONTROL, "a"), "Description updated");	
 	//text append
 	EditLease.description().sendKeys(Keys.END, " - Lease status changed from Active to Eviction");
-	EditLease.save();
-	EditLease.restrictionsSave().click();
+	EditLease.saveEviction();
+	EditLease.restrictionsSave();
 	}
 }

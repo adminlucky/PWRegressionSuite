@@ -14,14 +14,13 @@ import testBase.TestBase;
 import utilities.UtilityMethods;
 
 
-public class createNewLease extends TestBase {
+public class CreateNewLeaseTest extends TestBase {
 	
 	Excel_Reader xlReader = new Excel_Reader();
 	
 	@Test
 	public void createLease() throws IOException, InterruptedException{
 		test=extent.createTest("createLease");
-		//initialization();
 		Login.refreshPage();
 		Login.homePage().click();
 		String filepath = System.getProperty("user.dir")+"/src/main/java/testdata/PWData.xlsx";
@@ -30,7 +29,6 @@ public class createNewLease extends TestBase {
 		newLease.location().click();
 		newLease.selectLocation().click();
 		newLease.done();
-		
 		//newLease.status();
 		newLease.startCalendar();
 		newLease.endDate();
@@ -49,8 +47,9 @@ public class createNewLease extends TestBase {
 		AddAutoCharge.amount().sendKeys(Keys.chord(Keys.CONTROL, "a"));
 		AddAutoCharge.amount().sendKeys("$700");
 		AddAutoCharge.desc().sendKeys("Rent auto charge");
-		AddAutoCharge.save();
+		AddAutoCharge.saveAutoCharge();
 		UtilityMethods.scrollDown(driver);
+		newLease.unScheduleInspection();
 		newLease.saveLease();
 		newLease.cancel();
 		NewLeaseFromLeasePage.leaseSummaryLink().click();

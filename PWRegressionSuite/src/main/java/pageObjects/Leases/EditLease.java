@@ -38,12 +38,23 @@ public class EditLease extends TestBase {
 	public static WebElement description(){
 		return driver.findElement(By.xpath("//textarea[@name='entity.comments']"));
 	}
-	public static void save(){
+	public static void saveLease(){
 		driver.findElement(By.xpath("(//input[@onclick='save()'])[1]")).click();
 		UtilityMethods.waitForElementToBeInvisible(driver, "//form[@id='leaseEditForm']");
 	}
-	public static WebElement restrictionsSave(){
-		return driver.findElement(By.xpath("(//input[@value='Save'])[4]"));
+	public static void saveEviction(){
+		//driver.findElement(By.xpath("(//input[@onclick='save()'])[1]")).click();
+		driver.findElement(By.xpath("//div[@class='primaryButtons']//following::input")).click();
+		//UtilityMethods.waitForElementToBeInvisible(driver, "//form[@id='leaseEditForm']");
+	}
+	public static void saveTerminate(){
+		driver.findElement(By.xpath("(//input[@onclick='save()'])[1]")).click();
+		confirmTerminate();
+		UtilityMethods.waitForElementToBeInvisible(driver, "//form[@id='leaseEditForm']");
+	}
+	public static void restrictionsSave(){
+		driver.findElement(By.xpath("//*[@id='evictionRestrictionsForm']/div/input[1]")).click();;
+		UtilityMethods.waitForElementToBeInvisible(driver, "//*[@id='evictionRestrictionsForm']");
 	}
 	
 	public static void vacatedDate(){

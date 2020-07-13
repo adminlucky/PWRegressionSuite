@@ -30,9 +30,9 @@ public class AddAutoChargeTest extends TestBase {
 	AddAutoCharge.newAutoCharge().click();
 	AddAutoCharge.startDate();
 	AddAutoCharge.amount().sendKeys(Keys.chord(Keys.CONTROL, "a"));
-	AddAutoCharge.amount().sendKeys("900");
+	AddAutoCharge.amount().sendKeys("901");
 	AddAutoCharge.desc().sendKeys("Monthly Rent auto charge");
-	AddAutoCharge.save();
-	EditLease.save();	
+	AddAutoCharge.saveAutoCharge();
+	EditLease.saveLease();	
 	}
 }

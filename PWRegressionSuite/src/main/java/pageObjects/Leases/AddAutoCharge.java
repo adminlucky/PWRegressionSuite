@@ -25,7 +25,7 @@ public class AddAutoCharge extends TestBase {
 	public static WebElement desc(){
 		return driver.findElement(By.id("charge.description"));
 	}
-	public static void save(){
+	public static void saveAutoCharge(){
 		driver.findElement(By.xpath("//div[@id='editAutoChargeForm']//div[@class='primaryButtons']//input[1]")).click();
 		UtilityMethods.waitForElementToBeInvisible(driver, "//div[@id='editAutoChargeForm']");
 	}

@@ -4,14 +4,14 @@
   <test name="Test">
     <classes>
       
-      <class name="testScripts.leases.createNewLease"/>
-      <class name="testScripts.leases.AddAutoChargeTest"/>
-      <class name="testScripts.leases.createDiscountTest"/>
-      <class name="testScripts.leases.createJETest"/>
+      <class name="testScripts.leases.CreateNewLeaseTest"/>
+      <class name="testScripts.leases.NewLeaseWithExistingContactTest"/>
+      <class name="testScripts.leases.NewLeaseWithLeaseFormTest"/>
+      <class name="testScripts.leases.NewLeaseWithLFAndExistingContactTest"/>
+      <class name="testScripts.leases.CreateNewLeasefromLedgerTest"/>
+      <class name="testScripts.leases.CreateNewLeasefromSummaryTest"/>
       
-      
-      
-    </classes> 
+	</classes> 
    <!-- 	<packages>
             <package name="testScripts.leases.*"/>
     </packages> -->

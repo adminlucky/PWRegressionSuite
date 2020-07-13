@@ -1,9 +1,12 @@
 package pageObjects.Leases;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
@@ -24,8 +27,17 @@ public class CreateTasks extends TestBase {
 		return driver.findElement(By.id("descriptionInput"));
 	}
 	public static void dueDate(){
-		String date = new SimpleDateFormat("MM/dd/yyyy").format(new Date());
-		driver.findElement(By.id("dueDateInput")).sendKeys(date+"\t");
+		/*String date = new SimpleDateFormat("MM/dd/yyyy").format(new Date());
+		driver.findElement(By.id("dueDateInput")).sendKeys(date);
+		driver.findElement(By.id("dueDateInput")).sendKeys(Keys.chord(Keys.TAB));*/
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+	    Calendar c = Calendar.getInstance();
+	    c.setTime(new Date()); // Use today date
+	    c.add(Calendar.DATE, 3); // Adding 3 days which is two weeks from the current date
+	    String output = sdf.format(c.getTime());
+	      
+	    JavascriptExecutor js = (JavascriptExecutor)driver;
+	    js.executeScript("document.getElementById('dueDateInput').value='"+output+"'");
 	}
 	public static WebElement deligateInput(){
 		return driver.findElement(By.id("delegateInput"));

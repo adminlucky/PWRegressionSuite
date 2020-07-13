@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import testBase.TestBase;
+import utilities.UtilityMethods;
 
 
 public class LeasesMassUpdate extends TestBase {
@@ -20,7 +21,8 @@ public class LeasesMassUpdate extends TestBase {
 	public static WebElement newValue(){
 		return driver.findElement(By.xpath("//input[@id='massUpdateValue']"));
 	}
-	public static WebElement submit(){
-		return driver.findElement(By.xpath("//input[@id='submitMassUpdateButtonee']"));
+	public static void submit(){
+		driver.findElement(By.xpath("//input[@id='submitMassUpdateButton']")).click();
+		//UtilityMethods.waitForElementToBeInvisible(driver, "//*[@id='massUpdateDiv']");
 	}
 }

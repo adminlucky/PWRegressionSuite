@@ -3,6 +3,7 @@ package pageObjects.Leases;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import testBase.TestBase;
+import utilities.UtilityMethods;
 
 
 public class newLeaseWithExistingContact extends TestBase {
@@ -20,8 +21,11 @@ public class newLeaseWithExistingContact extends TestBase {
 	public static WebElement selectContact(){
 		return driver.findElement(By.xpath("//div[2]/table[1]/tbody[1]/tr[1]/td[1]/input[1]"));
 	}
-	public static WebElement saveContact(){
-		return driver.findElement(By.xpath("//div[@id='primaryButtons']//input[1]"));
+	public static void saveContact(){
+		driver.findElement(By.xpath("//div[@id='primaryButtons']//input[1]")).click();
+		//To handle prospect contact
+		
+		UtilityMethods.waitForElementToBeInvisible(driver, "//div[@id='addContactForm']");
 	}
 	
 }
