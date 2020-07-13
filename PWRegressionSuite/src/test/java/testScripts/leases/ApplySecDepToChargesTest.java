@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import pageObjects.Leases.ApplySecDepCharges;
 import pageObjects.Leases.EditLease;
 import pageObjects.Leases.LeaseLedger;
+import pageObjects.Leases.Login;
 import pageObjects.Leases.NewLeaseFromLeasePage;
 import pageObjects.Leases.newLease;
 import testBase.TestBase;
@@ -15,9 +16,10 @@ import testBase.TestBase;
 public class ApplySecDepToChargesTest extends TestBase {
 	
 	@Test
-	public void applySecDepToCharges() throws IOException{
+	public void applySecDepToCharges() throws IOException, InterruptedException{
 	test=extent.createTest("applySecDepToCharges");
-	initialization();
+	Login.refreshPage();
+	Login.homePage().click();
 	newLease.leases().click();
 	newLease.activeLeases().click();
 	EditLease.firstLease().click();

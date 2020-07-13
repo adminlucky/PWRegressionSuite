@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 
 import pageObjects.Leases.EditLease;
 import pageObjects.Leases.LeaseNewWorkorder;
+import pageObjects.Leases.Login;
 import pageObjects.Leases.newLease;
 import testBase.TestBase;
 import utilities.UtilityMethods;
@@ -14,9 +15,10 @@ import utilities.UtilityMethods;
 public class LeaseNewWorkorderTest extends TestBase {
 	
 	@Test
-	public void newWorkorder() throws IOException{
+	public void newWorkorder() throws IOException, InterruptedException{
 	test=extent.createTest("newWorkorder");
-	initialization();
+	Login.refreshPage();
+	Login.homePage().click();
 	newLease.leases().click();
 	EditLease.firstLease().click();
 	UtilityMethods.scrollDownHalf(driver);

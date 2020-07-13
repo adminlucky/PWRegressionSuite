@@ -19,13 +19,11 @@ public class createDiscountTest extends TestBase {
 	@Test
 	public void createDiscount() throws IOException, InterruptedException{
 		test=extent.createTest("createDiscount");
-		//initialization();
 		Login.refreshPage();
 		Login.homePage().click();
 		newLease.leases().click();
 		newLease.activeLeases().click();
 		MoveoutAndTerminateLease.firstActiveLease().click();
-		//NewLeaseFromLeasePage.leaseSummaryLink().click();
 		adjustments.clickLedger().click();
 		adjustments.adjustmentsButton().click();
 		adjustments.discount().click();

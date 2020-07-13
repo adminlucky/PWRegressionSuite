@@ -4,6 +4,7 @@ import java.io.IOException;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
+import pageObjects.Leases.Login;
 import pageObjects.Leases.MoveoutAndTerminateLease;
 import pageObjects.Leases.createCharge;
 import pageObjects.Leases.newLease;
@@ -13,9 +14,10 @@ public class createChargeTest extends TestBase {
 	
 	//This test will validate the new charge creation for an active lease 
 	@Test
-	public void createCharge() throws IOException{
+	public void createCharge() throws IOException, InterruptedException{
 		test=extent.createTest("createCharge");
-		initialization();
+		Login.refreshPage();
+		Login.homePage().click();
 		newLease.leases().click();
 		newLease.activeLeases().click();
 		MoveoutAndTerminateLease.firstActiveLease().click();

@@ -2,19 +2,19 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
   <test name="Test">
-    <classes>
-      
-      <class name="testScripts.leases.CreateNewLeaseTest"/>
+    
+    <!-- <classes>
+	  <class name="testScripts.leases.CreateNewLeaseTest"/>
       <class name="testScripts.leases.NewLeaseWithExistingContactTest"/>
       <class name="testScripts.leases.NewLeaseWithLeaseFormTest"/>
       <class name="testScripts.leases.NewLeaseWithLFAndExistingContactTest"/>
       <class name="testScripts.leases.CreateNewLeasefromLedgerTest"/>
       <class name="testScripts.leases.CreateNewLeasefromSummaryTest"/>
-      
-	</classes> 
-   <!-- 	<packages>
+	</classes>  -->
+	
+   	<packages>
             <package name="testScripts.leases.*"/>
-    </packages> -->
+    </packages>
     
   </test> <!-- Test -->
 </suite> <!-- Suite -->

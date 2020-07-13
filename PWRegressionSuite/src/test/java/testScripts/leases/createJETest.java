@@ -18,7 +18,6 @@ public class createJETest extends TestBase {
 	@Test
 	public void createNewJE() throws IOException, InterruptedException{
 		test=extent.createTest("createNewJE");
-		//initialization();
 		Login.refreshPage();
 		Login.homePage().click();
 		newLease.leases().click();

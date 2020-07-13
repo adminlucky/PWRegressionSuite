@@ -4,6 +4,7 @@ import java.io.IOException;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
+import pageObjects.Leases.Login;
 import pageObjects.Leases.MoveoutAndTerminateLease;
 import pageObjects.Leases.createPayment;
 import pageObjects.Leases.newLease;
@@ -12,9 +13,10 @@ import testBase.TestBase;
 public class createPaymentTest extends TestBase {
 
 	@Test
-	public void createPayment() throws IOException{
+	public void createPayment() throws IOException, InterruptedException{
 		test=extent.createTest("createPayment");
-		initialization();
+		Login.refreshPage();
+		Login.homePage().click();
 		newLease.leases().click();
 		newLease.activeLeases().click();
 		MoveoutAndTerminateLease.firstActiveLease().click();

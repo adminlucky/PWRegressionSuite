@@ -4,6 +4,7 @@ import java.io.IOException;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 import pageObjects.Leases.EditLease;
+import pageObjects.Leases.Login;
 import pageObjects.Leases.NewLeaseFromLeasePage;
 import pageObjects.Leases.RentersInsurance;
 import pageObjects.Leases.newLease;
@@ -14,9 +15,10 @@ import utilities.UtilityMethods;
 public class RecordRentersInsuranceTest extends TestBase {
 	
 	@Test
-	public void recordRentersInsurance() throws IOException{
+	public void recordRentersInsurance() throws IOException, InterruptedException{
 	test=extent.createTest("recordRentersInsurance");
-	initialization();
+	Login.refreshPage();
+	Login.homePage().click();
 	newLease.leases().click();
 	newLease.activeLeases().click();
 	EditLease.firstLease().click();

@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
+import pageObjects.Leases.Login;
 import pageObjects.Leases.MoveoutAndTerminateLease;
 import pageObjects.Leases.newLease;
 import testBase.TestBase;
@@ -13,9 +14,10 @@ import testBase.TestBase;
 public class MoveoutAndTerminateLeaseTest extends TestBase {
 
 	@Test
-	public void moveoutAndTerminateLease() throws IOException{
+	public void moveoutAndTerminateLease() throws IOException, InterruptedException{
 		test=extent.createTest("moveoutAndTerminateLease");
-		initialization();
+		Login.refreshPage();
+		Login.homePage().click();
 		newLease.leases().click();
 		newLease.activeLeases().click();
 		MoveoutAndTerminateLease.firstActiveLease().click();

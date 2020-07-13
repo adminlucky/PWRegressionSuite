@@ -19,7 +19,6 @@ public class AddAutoChargeTest extends TestBase {
 	@Test
 	public void addAutoCharge() throws IOException, InterruptedException{
 	test=extent.createTest("addAutoCharge");
-	//initialization();
 	Login.refreshPage();
 	Login.homePage().click();
 	newLease.leases().click();

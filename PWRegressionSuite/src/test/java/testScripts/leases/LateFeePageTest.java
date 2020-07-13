@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 
 import pageObjects.Leases.EditLease;
 import pageObjects.Leases.LeaseLedger;
+import pageObjects.Leases.Login;
 import pageObjects.Leases.NewLeaseFromLeasePage;
 import pageObjects.Leases.newLease;
 import testBase.TestBase;
@@ -13,9 +14,10 @@ import testBase.TestBase;
 public class LateFeePageTest extends TestBase {
 	
 	@Test
-	public void lateFeeNavigation() throws IOException{
+	public void lateFeeNavigation() throws IOException, InterruptedException{
 	test=extent.createTest("lateFeeNavigation");
-	initialization();
+	Login.refreshPage();
+	Login.homePage().click();
 	newLease.leases().click();
 	EditLease.firstLease().click();
 	NewLeaseFromLeasePage.ledger().click();
