@@ -12,7 +12,6 @@ public class ApplySecDepCharges extends TestBase {
 	}
 	public static boolean checkUnpaidChargesExist(){
 		String charges = driver.findElement(By.xpath("//table[@class='list']//th[contains(text(),'Date')]")).getText();
-		System.out.println(charges);
 		return !charges.equalsIgnoreCase("No Charges");
 	}
 	public static WebElement amountDue(){

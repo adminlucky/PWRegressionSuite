@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
+import pageObjects.Leases.AddAutoCharge;
 import pageObjects.Leases.Login;
 import pageObjects.Leases.MoveoutAndTerminateLease;
 import pageObjects.Leases.newLease;
@@ -17,14 +18,14 @@ public class MoveoutAndTerminateLeaseTest extends TestBase {
 	public void moveoutAndTerminateLease() throws IOException, InterruptedException{
 		test=extent.createTest("moveoutAndTerminateLease");
 		Login.refreshPage();
-		Login.homePage().click();
+		AddAutoCharge.waitForLeases();
 		newLease.leases().click();
 		newLease.activeLeases().click();
 		MoveoutAndTerminateLease.firstActiveLease().click();
 		MoveoutAndTerminateLease.moveOutLink().click();
 		MoveoutAndTerminateLease.startCalendar();
 		MoveoutAndTerminateLease.reason();
-		MoveoutAndTerminateLease.disablePortal().click();
+		//MoveoutAndTerminateLease.disablePortal().click();
 		MoveoutAndTerminateLease.comment().sendKeys("Terminating lease");
 		MoveoutAndTerminateLease.save().click();
 	}

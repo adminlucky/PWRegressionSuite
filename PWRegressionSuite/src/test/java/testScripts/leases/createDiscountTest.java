@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
+import pageObjects.Leases.AddAutoCharge;
 import pageObjects.Leases.Login;
 import pageObjects.Leases.MoveoutAndTerminateLease;
 import pageObjects.Leases.NewLeaseFromLeasePage;
@@ -20,7 +21,7 @@ public class createDiscountTest extends TestBase {
 	public void createDiscount() throws IOException, InterruptedException{
 		test=extent.createTest("createDiscount");
 		Login.refreshPage();
-		Login.homePage().click();
+		AddAutoCharge.waitForLeases();
 		newLease.leases().click();
 		newLease.activeLeases().click();
 		MoveoutAndTerminateLease.firstActiveLease().click();

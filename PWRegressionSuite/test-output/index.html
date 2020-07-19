@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,8 +37,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-passed">Suite</span>
+            <a href="#" class="navigator-link" panel-name="suite-Regression_Suite">
+              <span class="suite-name border-failed">Regression Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,37 +48,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-Suite">
+                  <a href="#" class="navigator-link " panel-name="test-xml-Regression_Suite">
                     <span>C:\Users\rganpisetty\workspace\PWRegressionSuite\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-Suite">
+                  <a href="#" class="navigator-link " panel-name="testlist-Regression_Suite">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="group-Suite">
+                  <a href="#" class="navigator-link " panel-name="group-Regression_Suite">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="times-Suite">
+                  <a href="#" class="navigator-link " panel-name="times-Regression_Suite">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-Suite">
+                  <a href="#" class="navigator-link " panel-name="reporter-Regression_Suite">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-Suite">
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Regression_Suite">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-Suite">
+                  <a href="#" class="navigator-link " panel-name="chronological-Regression_Suite">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -91,46 +91,45 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods,   6 passed</span>
+                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Regression_Suite" class="hide-methods failed suite-Regression_Suite"> (hide)</a> <!-- hide-methods failed suite-Regression_Suite -->
+                      <a href="#" panel-name="suite-Regression_Suite" class="show-methods failed suite-Regression_Suite"> (show)</a> <!-- show-methods failed suite-Regression_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Regression_Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Regression_Suite" title="testScripts.leases.EmailTenantsTest" hash-for-method="emailTenants">emailTenants</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Regression_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
                     <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Regression_Suite" class="hide-methods passed suite-Regression_Suite"> (hide)</a> <!-- hide-methods passed suite-Regression_Suite -->
+                      <a href="#" panel-name="suite-Regression_Suite" class="show-methods passed suite-Regression_Suite"> (show)</a> <!-- show-methods passed suite-Regression_Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Suite">
+                    <div class="method-list-content passed suite-Regression_Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testScripts.leases.CreateNewLeaseTest" hash-for-method="createLease">createLease</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Regression_Suite" title="testScripts.leases.CreateLeasesNewViewTest" hash-for-method="createLeasesNewView">createLeasesNewView</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testScripts.leases.NewLeaseWithExistingContactTest" hash-for-method="createLeaseWithExistingContact">createLeaseWithExistingContact</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Regression_Suite" title="testScripts.leases.EditLeasesViewTest" hash-for-method="editLeasesView">editLeasesView</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testScripts.leases.NewLeaseWithLFAndExistingContactTest" hash-for-method="createLeaseWithLFAndExistingContact">createLeaseWithLFAndExistingContact</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Regression_Suite" title="testScripts.leases.LeasesViewSetAsDefaultTest" hash-for-method="leasesViewSetAsDefault">leasesViewSetAsDefault</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testScripts.leases.NewLeaseWithLeaseFormTest" hash-for-method="createLeaseWithLeaseForm">createLeaseWithLeaseForm</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testScripts.leases.CreateNewLeasefromLedgerTest" hash-for-method="createNewLeasefromLedgerPage">createNewLeasefromLedgerPage</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testScripts.leases.CreateNewLeasefromSummaryTest" hash-for-method="createNewLeasefromSummaryPage">createNewLeasefromSummaryPage</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
+                    </div> <!-- method-list-content passed suite-Regression_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -141,99 +140,91 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+        <div panel-name="suite-Regression_Suite" class="panel Regression_Suite">
+          <div class="suite-Regression_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testScripts.leases.NewLeaseWithLFAndExistingContactTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">testScripts.leases.EmailTenantsTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createLeaseWithLFAndExistingContact">
-                  </a> <!-- createLeaseWithLFAndExistingContact -->
-                  <span class="method-name">createLeaseWithLFAndExistingContact</span>
+                  <a name="emailTenants">
+                  </a> <!-- emailTenants -->
+                  <span class="method-name">emailTenants</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: /html[1]/body[1]/p[2]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.6.0&apos;, revision: &apos;6fbf3ec767&apos;, time: &apos;2017-09-27T16:15:26.402Z&apos;
+System info: host: &apos;RPIPL-NB-DL069&apos;, ip: &apos;192.168.0.175&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_231&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\rganpisetty\AppData\Local\Temp\rust_mozprofileiNm4uU, rotatable=false, moz:geckodriverVersion=0.26.0, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, moz:headless=false, platform=WINDOWS, moz:accessibilityChecks=false, moz:useNonSpecCompliantPointerOrigin=false, acceptInsecureCerts=true, browserVersion=72.0.2, moz:shutdownTimeout=60000, platformVersion=10.0, moz:processID=27596, browserName=firefox, moz:buildID=20200117190643, javascriptEnabled=true, platformName=WINDOWS, setWindowRect=true, moz:webdriverClick=true}]
+Session ID: 953ff74c-7d22-4011-a2e1-2b9b834bb61e
+*** Element info: {Using=xpath, value=/html[1]/body[1]/p[2]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:458)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at pageObjects.Leases.EmailTenants.body(EmailTenants.java:54)
+	at testScripts.leases.EmailTenantsTest.emailTenants(EmailTenantsTest.java:29)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
+          </div> <!-- suite-Regression_Suite-class-failed -->
+          <div class="suite-Regression_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testScripts.leases.CreateNewLeasefromSummaryTest</span>
+              <span class="class-name">testScripts.leases.EditLeasesViewTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createNewLeasefromSummaryPage">
-                  </a> <!-- createNewLeasefromSummaryPage -->
-                  <span class="method-name">createNewLeasefromSummaryPage</span>
+                  <a name="editLeasesView">
+                  </a> <!-- editLeasesView -->
+                  <span class="method-name">editLeasesView</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
+          </div> <!-- suite-Regression_Suite-class-passed -->
+          <div class="suite-Regression_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testScripts.leases.NewLeaseWithLeaseFormTest</span>
+              <span class="class-name">testScripts.leases.LeasesViewSetAsDefaultTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createLeaseWithLeaseForm">
-                  </a> <!-- createLeaseWithLeaseForm -->
-                  <span class="method-name">createLeaseWithLeaseForm</span>
+                  <a name="leasesViewSetAsDefault">
+                  </a> <!-- leasesViewSetAsDefault -->
+                  <span class="method-name">leasesViewSetAsDefault</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
+          </div> <!-- suite-Regression_Suite-class-passed -->
+          <div class="suite-Regression_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testScripts.leases.CreateNewLeasefromLedgerTest</span>
+              <span class="class-name">testScripts.leases.CreateLeasesNewViewTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createNewLeasefromLedgerPage">
-                  </a> <!-- createNewLeasefromLedgerPage -->
-                  <span class="method-name">createNewLeasefromLedgerPage</span>
+                  <a name="createLeasesNewView">
+                  </a> <!-- createLeasesNewView -->
+                  <span class="method-name">createLeasesNewView</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testScripts.leases.CreateNewLeaseTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="createLease">
-                  </a> <!-- createLease -->
-                  <span class="method-name">createLease</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testScripts.leases.NewLeaseWithExistingContactTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="createLeaseWithExistingContact">
-                  </a> <!-- createLeaseWithExistingContact -->
-                  <span class="method-name">createLeaseWithExistingContact</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-        </div> <!-- panel Suite -->
-        <div panel-name="test-xml-Suite" class="panel">
+          </div> <!-- suite-Regression_Suite-class-passed -->
+        </div> <!-- panel Regression_Suite -->
+        <div panel-name="test-xml-Regression_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">C:\Users\rganpisetty\workspace\PWRegressionSuite\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
@@ -241,103 +232,93 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
-  &lt;test name=&quot;Test&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Regression Suite&quot;&gt;
+  &lt;test name=&quot;Leases Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testScripts.leases.CreateNewLeaseTest&quot;/&gt;
-      &lt;class name=&quot;testScripts.leases.NewLeaseWithExistingContactTest&quot;/&gt;
-      &lt;class name=&quot;testScripts.leases.NewLeaseWithLeaseFormTest&quot;/&gt;
-      &lt;class name=&quot;testScripts.leases.NewLeaseWithLFAndExistingContactTest&quot;/&gt;
-      &lt;class name=&quot;testScripts.leases.CreateNewLeasefromLedgerTest&quot;/&gt;
-      &lt;class name=&quot;testScripts.leases.CreateNewLeasefromSummaryTest&quot;/&gt;
+      &lt;class name=&quot;testScripts.leases.EmailTenantsTest&quot;/&gt;
+      &lt;class name=&quot;testScripts.leases.CreateLeasesNewViewTest&quot;/&gt;
+      &lt;class name=&quot;testScripts.leases.LeasesViewSetAsDefaultTest&quot;/&gt;
+      &lt;class name=&quot;testScripts.leases.EditLeasesViewTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
-&lt;/suite&gt; &lt;!-- Suite --&gt;
+  &lt;/test&gt; &lt;!-- Leases Test --&gt;
+&lt;/suite&gt; &lt;!-- Regression Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Suite" class="panel">
+        <div panel-name="testlist-Regression_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Suite</span>
+            <span class="header-content">Tests for Regression Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (6 classes)</span>
+                <span class="test-name">Leases Test (4 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Suite" class="panel">
+        <div panel-name="group-Regression_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Suite</span>
+            <span class="header-content">Groups for Regression Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Suite" class="panel">
+        <div panel-name="times-Regression_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Suite</span>
+            <span class="header-content">Times for Regression Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Suite');
-function tableData_Suite() {
+suiteTableInitFunctions.push('tableData_Regression_Suite');
+function tableData_Regression_Suite() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(6);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'createLease')
-data.setCell(0, 2, 'testScripts.leases.CreateNewLeaseTest')
-data.setCell(0, 3, 72024);
+data.setCell(0, 1, 'emailTenants')
+data.setCell(0, 2, 'testScripts.leases.EmailTenantsTest')
+data.setCell(0, 3, 51282);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'createNewLeasefromSummaryPage')
-data.setCell(1, 2, 'testScripts.leases.CreateNewLeasefromSummaryTest')
-data.setCell(1, 3, 41060);
+data.setCell(1, 1, 'createLeasesNewView')
+data.setCell(1, 2, 'testScripts.leases.CreateLeasesNewViewTest')
+data.setCell(1, 3, 23317);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'createNewLeasefromLedgerPage')
-data.setCell(2, 2, 'testScripts.leases.CreateNewLeasefromLedgerTest')
-data.setCell(2, 3, 40783);
+data.setCell(2, 1, 'editLeasesView')
+data.setCell(2, 2, 'testScripts.leases.EditLeasesViewTest')
+data.setCell(2, 3, 22836);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'createLeaseWithLFAndExistingContact')
-data.setCell(3, 2, 'testScripts.leases.NewLeaseWithLFAndExistingContactTest')
-data.setCell(3, 3, 39810);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'createLeaseWithLeaseForm')
-data.setCell(4, 2, 'testScripts.leases.NewLeaseWithLeaseFormTest')
-data.setCell(4, 3, 39333);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'createLeaseWithExistingContact')
-data.setCell(5, 2, 'testScripts.leases.NewLeaseWithExistingContactTest')
-data.setCell(5, 3, 37438);
-window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
+data.setCell(3, 1, 'leasesViewSetAsDefault')
+data.setCell(3, 2, 'testScripts.leases.LeasesViewSetAsDefaultTest')
+data.setCell(3, 3, 5299);
+window.suiteTableData['Regression_Suite']= { tableData: data, tableDiv: 'times-div-Regression_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 minutes</span>
-              <div id="times-div-Suite">
-              </div> <!-- times-div-Suite -->
+              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <div id="times-div-Regression_Suite">
+              </div> <!-- times-div-Regression_Suite -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Suite" class="panel">
+        <div panel-name="reporter-Regression_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Suite</span>
+            <span class="header-content">Reporter output for Regression Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Suite" class="panel">
+        <div panel-name="ignored-methods-Regression_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">10 ignored methods</span>
+            <span class="header-content">6 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">testScripts.leases.NewLeaseWithLFAndExistingContactTest</span>
+              <span class="ignored-class-name">testScripts.leases.EditLeasesViewTest</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">reportSetup</span>
                 <br/>
@@ -346,7 +327,7 @@ return data;
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">testScripts.leases.CreateNewLeasefromSummaryTest</span>
+              <span class="ignored-class-name">testScripts.leases.LeasesViewSetAsDefaultTest</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">reportSetup</span>
                 <br/>
@@ -355,25 +336,7 @@ return data;
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">testScripts.leases.NewLeaseWithLeaseFormTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">reportSetup</span>
-                <br/>
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">testScripts.leases.CreateNewLeasefromLedgerTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">reportSetup</span>
-                <br/>
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">testScripts.leases.NewLeaseWithExistingContactTest</span>
+              <span class="ignored-class-name">testScripts.leases.CreateLeasesNewViewTest</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">reportSetup</span>
                 <br/>
@@ -383,86 +346,72 @@ return data;
             </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Suite" class="panel">
+        <div panel-name="chronological-Regression_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testScripts.leases.CreateNewLeaseTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testScripts.leases.EmailTenantsTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">reportSetup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="test-method">
-                <span class="method-name">createLease</span>
-                <span class="method-start">9622 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">emailTenants</span>
+                <span class="method-start">9711 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">getResult([TestResult name=createLease status=SUCCESS method=CreateNewLeaseTest.createLease()[pri:0, instance:...)</span>
-                <span class="method-start">81647 ms</span>
+                <span class="method-name">getResult([TestResult name=emailTenants status=FAILURE method=EmailTenantsTest.emailTenants()[pri:0, instance:...)</span>
+                <span class="method-start">61009 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">testScripts.leases.NewLeaseWithExistingContactTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testScripts.leases.CreateLeasesNewViewTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">createLeaseWithExistingContact</span>
-                <span class="method-start">81663 ms</span>
+                <span class="method-name">createLeasesNewView</span>
+                <span class="method-start">61178 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">getResult([TestResult name=createLeaseWithExistingContact status=SUCCESS method=NewLeaseWithExistingContactTes...)</span>
-                <span class="method-start">119103 ms</span>
+                <span class="method-name">getResult([TestResult name=createLeasesNewView status=SUCCESS method=CreateLeasesNewViewTest.createLeasesNewVi...)</span>
+                <span class="method-start">84495 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">testScripts.leases.NewLeaseWithLeaseFormTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testScripts.leases.LeasesViewSetAsDefaultTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">createLeaseWithLeaseForm</span>
-                <span class="method-start">119105 ms</span>
+                <span class="method-name">leasesViewSetAsDefault</span>
+                <span class="method-start">84495 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">getResult([TestResult name=createLeaseWithLeaseForm status=SUCCESS method=NewLeaseWithLeaseFormTest.createLeas...)</span>
-                <span class="method-start">158439 ms</span>
-              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">testScripts.leases.NewLeaseWithLFAndExistingContactTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testScripts.leases.EditLeasesViewTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">createLeaseWithLFAndExistingContact</span>
-                <span class="method-start">158441 ms</span>
+                <span class="method-name">editLeasesView</span>
+                <span class="method-start">89794 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testScripts.leases.LeasesViewSetAsDefaultTest</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
-                <span class="method-name">getResult([TestResult name=createLeaseWithLFAndExistingContact status=SUCCESS method=NewLeaseWithLFAndExisting...)</span>
-                <span class="method-start">198253 ms</span>
+                <span class="method-name">getResult([TestResult name=leasesViewSetAsDefault status=SUCCESS method=LeasesViewSetAsDefaultTest.leasesViewS...)</span>
+                <span class="method-start">89794 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">testScripts.leases.CreateNewLeasefromLedgerTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">createNewLeasefromLedgerPage</span>
-                <span class="method-start">198254 ms</span>
-              </div> <!-- test-method -->
+              <div class="chronological-class-name">testScripts.leases.EditLeasesViewTest</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
-                <span class="method-name">getResult([TestResult name=createNewLeasefromLedgerPage status=SUCCESS method=CreateNewLeasefromLedgerTest.cre...)</span>
-                <span class="method-start">239039 ms</span>
+                <span class="method-name">getResult([TestResult name=editLeasesView status=SUCCESS method=EditLeasesViewTest.editLeasesView()[pri:0, ins...)</span>
+                <span class="method-start">112630 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">testScripts.leases.CreateNewLeasefromSummaryTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">createNewLeasefromSummaryPage</span>
-                <span class="method-start">239041 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">getResult([TestResult name=createNewLeasefromSummaryPage status=SUCCESS method=CreateNewLeasefromSummaryTest.c...)</span>
-                <span class="method-start">280102 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">testScripts.leases.CreateNewLeaseTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testScripts.leases.EmailTenantsTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">280125 ms</span>
+                <span class="method-start">112672 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

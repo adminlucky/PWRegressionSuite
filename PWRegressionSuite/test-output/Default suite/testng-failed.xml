@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testScripts.leases.NewLeaseWithLeaseFormTest">
+      <class name="testScripts.leases.EditLeasesViewTest">
         <methods>
           <include name="reportSetup"/>
           <include name="tearDown"/>
-          <include name="createLeaseWithLeaseForm"/>
+          <include name="editLeasesView"/>
           <include name="getResult"/>
         </methods>
-      </class> <!-- testScripts.leases.NewLeaseWithLeaseFormTest -->
+      </class> <!-- testScripts.leases.EditLeasesViewTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

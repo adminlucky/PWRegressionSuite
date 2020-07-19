@@ -21,7 +21,8 @@ public class newLease extends TestBase {
 	public static WebElement vacantUnit;
 	
 	public static WebElement leases(){
-		UtilityMethods.waitForElementToBeClickable(driver, "//div[3]/div[2]/div[2]/ul[1]/li[5]/a[1]");
+		//UtilityMethods.waitForElementToBeClickable(driver, "//div[3]/div[2]/div[2]/ul[1]/li[5]/a[1]");
+		//(new WebDriverWait(driver, 5)).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[3]/div[2]/div[2]/ul[1]/li[5]/a[1]")));
 		return driver.findElement(By.xpath("//div[3]/div[2]/div[2]/ul[1]/li[5]/a[1]"));
 	}
 	public static WebElement activeLeases(){
@@ -34,7 +35,6 @@ public class newLease extends TestBase {
 		return driver.findElement(By.xpath("//a[contains(text(),'New Lease')]"));
 	}
 	public static WebElement location(){
-		//return driver.findElement(By.xpath("//table[@id='layoutTable']//table[1]//tbody[1]//tr[2]//td[1]//input[1]"));
 		(new WebDriverWait(driver, 5)).until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@value='Attach Location']")));
 		return driver.findElement(By.xpath("//input[@value='Attach Location']"));
 	}
@@ -80,9 +80,7 @@ public class newLease extends TestBase {
 		(new Select(driver.findElement(By.xpath("//select[@id='leaseFormSelect']")))).selectByIndex(5);
 	}
 	public static void publicAssistance(){
-		if(driver.findElement(By.xpath("//td[2]//a[1]//img[1]")).isDisplayed()){
-			driver.findElement(By.xpath("//td[2]//a[1]//img[1]")).click();
-		}
+		driver.findElement(By.xpath("//td[2]//a[1]//img[1]")).click();
 		//UtilityMethods.waitForElementToBeClickable(driver, "//div[4]/table[1]/tbody[1]");
 		UtilityMethods.waitForElementToBeInvisible(driver, "//div[4]/table[1]/tbody[1]");
 		(new Select(driver.findElement(By.xpath("//select[@name='entity.publicAssistanceProgram']")))).selectByVisibleText("Section 8");

@@ -3,6 +3,8 @@ package testScripts.leases;
 import java.io.IOException;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
+
+import pageObjects.Leases.AddAutoCharge;
 import pageObjects.Leases.EditLease;
 import pageObjects.Leases.Login;
 import pageObjects.Leases.NewLeaseFromLeasePage;
@@ -18,7 +20,7 @@ public class RecordRentersInsuranceTest extends TestBase {
 	public void recordRentersInsurance() throws IOException, InterruptedException{
 	test=extent.createTest("recordRentersInsurance");
 	Login.refreshPage();
-	Login.homePage().click();
+	AddAutoCharge.waitForLeases();
 	newLease.leases().click();
 	newLease.activeLeases().click();
 	EditLease.firstLease().click();
@@ -27,6 +29,11 @@ public class RecordRentersInsuranceTest extends TestBase {
 	RentersInsurance.recordPolicy().click();
 	RentersInsurance.policyNumber().sendKeys("2479341");
 	RentersInsurance.policyProvider();
+	RentersInsurance.effectiveDate();
+	RentersInsurance.nextRenewalDate();
+	RentersInsurance.comments().sendKeys("Renters insurance for lease");
+	UtilityMethods.scrollDownHalf(driver);
+	RentersInsurance.save();
 	
 	}
 }

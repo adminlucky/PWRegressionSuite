@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test name="Test">
+
+<suite name="Regression Suite">
+  
+  <test name="Leases Test">
     
-    <!-- <classes>
-	  <class name="testScripts.leases.CreateNewLeaseTest"/>
-      <class name="testScripts.leases.NewLeaseWithExistingContactTest"/>
-      <class name="testScripts.leases.NewLeaseWithLeaseFormTest"/>
-      <class name="testScripts.leases.NewLeaseWithLFAndExistingContactTest"/>
-      <class name="testScripts.leases.CreateNewLeasefromLedgerTest"/>
-      <class name="testScripts.leases.CreateNewLeasefromSummaryTest"/>
-	</classes>  -->
+    <classes>
+	 <class name="testScripts.leases.EmailTenantsTest"/>
+       <class name="testScripts.leases.CreateLeasesNewViewTest"/> 
+       <class name="testScripts.leases.LeasesViewSetAsDefaultTest"/>
+      <class name="testScripts.leases.EditLeasesViewTest"/>
+      
+     
+	</classes>  
 	
-   	<packages>
+	
+	 <!--<packages>
             <package name="testScripts.leases.*"/>
-    </packages>
+    </packages>-->
     
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -12,7 +12,8 @@ public class createCharge extends TestBase {
 	public static WebElement element = null; 
 	
 	public static WebElement clickLedger(){
-		return driver.findElement(By.xpath("//li[@id='tab2']"));
+		//return driver.findElement(By.xpath("//li[@id='tab2']"));
+		return driver.findElement(By.xpath("//div[3]/div[2]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/div[2]/ul[1]/li[1]/ul[1]/li[2]"));
 	}
 	public static WebElement newCharge(){
 		return driver.findElement(By.xpath("//div[@class='primaryButtons']//input[2]"));

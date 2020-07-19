@@ -2,6 +2,8 @@ package testScripts.leases;
 
 import java.io.IOException;
 import org.testng.annotations.Test;
+
+import pageObjects.Leases.AddAutoCharge;
 import pageObjects.Leases.DeleteLease;
 import pageObjects.Leases.Login;
 import pageObjects.Leases.newLease;
@@ -14,7 +16,7 @@ public class DeleteLeaseTest extends TestBase {
 	public void deleteLease() throws IOException, InterruptedException{
 	test=extent.createTest("deleteLease");
 	Login.refreshPage();
-	Login.homePage().click();
+	AddAutoCharge.waitForLeases();
 	newLease.leases().click();
 	newLease.draftLeases().click();
 	DeleteLease.firstLeaseCheckbox().click();

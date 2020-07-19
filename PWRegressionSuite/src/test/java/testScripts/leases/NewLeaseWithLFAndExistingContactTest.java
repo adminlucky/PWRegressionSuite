@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 import dataReader.Excel_Reader;
+import pageObjects.Leases.AddAutoCharge;
 import pageObjects.Leases.Login;
 import pageObjects.Leases.NewLeaseFromLeasePage;
 import pageObjects.Leases.newLease;
@@ -21,8 +22,7 @@ Excel_Reader xlReader = new Excel_Reader();
 	public void createLeaseWithLFAndExistingContact() throws IOException, InterruptedException{
 		test=extent.createTest("createLeaseWithLFAndExistingContact");
 		Login.refreshPage();
-		Login.homePage().click();
-		String filepath = System.getProperty("user.dir")+"/src/main/java/testdata/PWData.xlsx";
+		AddAutoCharge.waitForLeases();
 		newLease.leases().click();
 		newLease.newLeaseLink().click();
 		newLeaseWithLeaseForm.leaseForm();

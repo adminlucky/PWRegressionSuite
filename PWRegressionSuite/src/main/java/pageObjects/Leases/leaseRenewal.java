@@ -4,6 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import testBase.TestBase;
@@ -35,7 +36,18 @@ public class leaseRenewal extends TestBase {
 		driver.findElement(By.xpath("//input[@id='renewalOnDate']")).sendKeys(date);
 	}
 	public static void save(){
-		driver.findElement(By.xpath("//div[10]/div[3]/input[1]")).click();
-		UtilityMethods.waitForElementToBeInvisible(driver, "//*[@id='editLeaseRenewalContainer']");
+		if(!driver.findElements(By.xpath("//table[@id='leasingRenewalFeeTable']")).isEmpty())
+		{
+			driver.findElement(By.id("leaseDetailForm.leaseRenewalFeeAmountAsString")).sendKeys(Keys.chord(Keys.CONTROL,"a"));
+			driver.findElement(By.id("leaseDetailForm.leaseRenewalFeeAmountAsString")).sendKeys("50");
+			driver.findElement(By.xpath("//div[10]/div[3]/input[1]")).click();
+			UtilityMethods.waitForElementToBeInvisible(driver, "//*[@id='editLeaseRenewalContainer']");
+		}
+		
+		else{
+			driver.findElement(By.xpath("//div[10]/div[3]/input[1]")).click();
+			UtilityMethods.waitForElementToBeInvisible(driver, "//*[@id='editLeaseRenewalContainer']");
+		}
 	}
+	
 }

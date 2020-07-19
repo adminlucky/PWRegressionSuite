@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
+import pageObjects.Leases.AddAutoCharge;
 import pageObjects.Leases.Login;
 import pageObjects.Leases.MoveoutAndTerminateLease;
 import pageObjects.Leases.adjustments;
@@ -19,7 +20,7 @@ public class createAdjustmentTest extends TestBase {
 	public void createAdjustment() throws IOException, InterruptedException{
 		test=extent.createTest("createAdjustment");
 		Login.refreshPage();
-		Login.homePage().click();
+		AddAutoCharge.waitForLeases();
 		newLease.leases().click();
 		newLease.activeLeases().click();
 		MoveoutAndTerminateLease.firstActiveLease().click();

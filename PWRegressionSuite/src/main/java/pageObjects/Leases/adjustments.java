@@ -49,7 +49,7 @@ public class adjustments extends TestBase {
 		return driver.findElement(By.xpath("(//input[@id='refundType'])[3]"));
 	}
 	public static void payFrom(){
-		(new Select(driver.findElement(By.xpath("//select[@id='payTenantFromAccountID']")))).selectByIndex(3);
+		(new Select(driver.findElement(By.xpath("//select[@id='payTenantFromAccountID']")))).selectByVisibleText("1007 - Escrow/Security Acct");
 	}
 		
 		

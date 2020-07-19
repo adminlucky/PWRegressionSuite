@@ -4,6 +4,7 @@ import java.io.IOException;
 import org.testng.annotations.Test;
 
 import dataReader.Excel_Reader;
+import pageObjects.Leases.AddAutoCharge;
 import pageObjects.Leases.EditLease;
 import pageObjects.Leases.Login;
 import pageObjects.Leases.NewLeaseFromLeasePage;
@@ -20,8 +21,8 @@ public class CreateNewLeasefromSummaryTest extends TestBase {
 	public void createNewLeasefromSummaryPage() throws IOException, InterruptedException{
 		test=extent.createTest("createNewLeasefromSummaryPage");
 		Login.refreshPage();
-		Login.homePage().click();
 		String filepath = System.getProperty("user.dir")+"/src/main/java/testdata/PWData.xlsx";
+		AddAutoCharge.waitForLeases();
 		newLease.leases().click();
 		EditLease.firstLease().click();
 		NewLeaseFromLeasePage.leaseSummaryLink().click();

@@ -2,13 +2,26 @@ package pageObjects.Leases;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import testBase.TestBase;
 import utilities.UtilityMethods;
 
 
 public class AddAutoCharge extends TestBase {
+	
+	public static void waitForLeases(){
+		//driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		(new WebDriverWait(driver, 15)).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[3]/div[2]/div[2]/ul[1]/li[5]/a[1]")));
+	}
+	public static void changeTimeout(){
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	}
 	
 	public static WebElement newAutoCharge(){
 		//return driver.findElement(By.xpath("//div[@class='pageSection']//div[3]//input[1]"));

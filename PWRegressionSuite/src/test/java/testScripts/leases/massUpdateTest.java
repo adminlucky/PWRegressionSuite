@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
+import pageObjects.Leases.AddAutoCharge;
 import pageObjects.Leases.LeasesMassUpdate;
 import pageObjects.Leases.Login;
 import pageObjects.Leases.newLease;
@@ -16,7 +17,7 @@ public class massUpdateTest extends TestBase {
 	public void leasesMassUpdate() throws IOException, InterruptedException{
 		test=extent.createTest("leasesMassUpdate");
 		Login.refreshPage();
-		Login.homePage().click();
+		AddAutoCharge.waitForLeases();
 		newLease.leases().click();
 		LeasesMassUpdate.gridEdit().click();
 		LeasesMassUpdate.massUpdate().click();
@@ -24,6 +25,7 @@ public class massUpdateTest extends TestBase {
 		LeasesMassUpdate.newValue().sendKeys("Section 8");
 		LeasesMassUpdate.submit();
 		driver.switchTo().alert().accept();
+		//Thread.sleep(3000);
 		
 	}
 }

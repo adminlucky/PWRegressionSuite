@@ -106,7 +106,8 @@ import utilities.UtilityMethods;
 			UtilityMethods.waitForElementToLoad(driver, "//form[1]/div[10]/div[3]/input[2]");
 		}
 		public static void cancel(){
-			driver.findElement(By.xpath("//form[1]/div[10]/div[3]/input[2]")).click();
+			//driver.findElement(By.xpath("//form[1]/div[10]/div[3]/input[2]")).click();
+			driver.findElement(By.xpath("//div[3]/div[2]/table/tbody/tr/td[2]/form/div[10]/div[3]/input[2]")).click();
 			UtilityMethods.waitForElementToBeInvisible(driver, "//div[@id='moveInForm']");
 		}
 

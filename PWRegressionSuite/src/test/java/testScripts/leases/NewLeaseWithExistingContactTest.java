@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 import dataReader.Excel_Reader;
+import pageObjects.Leases.AddAutoCharge;
 import pageObjects.Leases.Login;
 import pageObjects.Leases.NewLeaseFromLeasePage;
 import pageObjects.Leases.newLease;
@@ -24,7 +25,7 @@ public class NewLeaseWithExistingContactTest extends TestBase {
 	public void createLeaseWithExistingContact() throws IOException, InterruptedException{
 		test=extent.createTest("createLeaseWithExistingContact");
 		Login.refreshPage();
-		Login.homePage().click();
+		AddAutoCharge.waitForLeases();
 		newLease.leases().click();
 		newLease.newLeaseLink().click();
 		newLease.location().click();

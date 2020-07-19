@@ -2,6 +2,8 @@ package testScripts.leases;
 
 import java.io.IOException;
 import org.testng.annotations.Test;
+
+import pageObjects.Leases.AddAutoCharge;
 import pageObjects.Leases.CreateTasks;
 import pageObjects.Leases.EditLease;
 import pageObjects.Leases.Login;
@@ -16,7 +18,7 @@ public class CreateSingleTaskTest extends TestBase {
 	public void createSingleTask() throws IOException, InterruptedException{
 	test=extent.createTest("createSingleTask");
 	Login.refreshPage();
-	Login.homePage().click();
+	AddAutoCharge.waitForLeases();
 	newLease.leases().click();
 	newLease.activeLeases().click();
 	EditLease.firstLease().click();

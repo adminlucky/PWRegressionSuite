@@ -21,6 +21,7 @@ public class MoveoutAndTerminateLease extends TestBase {
 		return driver.findElement(By.xpath("//a[contains(text(),'Move Out & Terminate')]"));
 	}
 	public static void reason(){
+		driver.findElement(By.xpath("//td[2]//a[1]//img[1]")).click();
 		(new Select(driver.findElement(By.name("entity.reasonForLeaving")))).selectByVisibleText("MOVE CITY");
 	}
 	public static void startCalendar(){

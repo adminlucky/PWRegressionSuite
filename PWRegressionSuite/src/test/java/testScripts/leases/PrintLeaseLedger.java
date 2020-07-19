@@ -3,6 +3,7 @@ package testScripts.leases;
 import java.io.IOException;
 import org.testng.annotations.Test;
 
+import pageObjects.Leases.AddAutoCharge;
 import pageObjects.Leases.EditLease;
 import pageObjects.Leases.LeaseLedger;
 import pageObjects.Leases.Login;
@@ -16,20 +17,19 @@ public class PrintLeaseLedger extends TestBase {
 	public void printLeaseLedger() throws IOException, InterruptedException{
 	test=extent.createTest("printLeaseLedger");
 	Login.refreshPage();
-	Login.homePage().click();
+	AddAutoCharge.waitForLeases();
 	newLease.leases().click();
 	EditLease.firstLease().click();
 	NewLeaseFromLeasePage.ledger().click();
 	LeaseLedger.printLedger().click();
 	
-	//String winHandleBefore = driver.getWindowHandle();
+	String winHandleBefore = driver.getWindowHandle();
 	for(String winHandle : driver.getWindowHandles()){
 	    driver.switchTo().window(winHandle);
 	}
-	//driver.close();
 	LeaseLedger.closeWindow().click();
 	
-	//driver.switchTo().window(winHandleBefore);
+	driver.switchTo().window(winHandleBefore);
 	
 	}
 }

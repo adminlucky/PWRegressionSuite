@@ -4,6 +4,7 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import pageObjects.Leases.AddAutoCharge;
 import pageObjects.Leases.EditLease;
 import pageObjects.Leases.LeaseLedger;
 import pageObjects.Leases.Login;
@@ -17,7 +18,7 @@ public class LateFeePageTest extends TestBase {
 	public void lateFeeNavigation() throws IOException, InterruptedException{
 	test=extent.createTest("lateFeeNavigation");
 	Login.refreshPage();
-	Login.homePage().click();
+	AddAutoCharge.waitForLeases();
 	newLease.leases().click();
 	EditLease.firstLease().click();
 	NewLeaseFromLeasePage.ledger().click();

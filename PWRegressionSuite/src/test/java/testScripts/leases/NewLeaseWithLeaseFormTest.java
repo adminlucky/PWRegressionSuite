@@ -7,6 +7,7 @@ import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
 import dataReader.Excel_Reader;
+import pageObjects.Leases.AddAutoCharge;
 import pageObjects.Leases.Login;
 import pageObjects.Leases.NewLeaseFromLeasePage;
 import pageObjects.Leases.newLease;
@@ -22,8 +23,8 @@ Excel_Reader xlReader = new Excel_Reader();
 	public void createLeaseWithLeaseForm() throws IOException, InterruptedException{
 		test=extent.createTest("createLeaseWithLeaseForm");
 		Login.refreshPage();
-		Login.homePage().click();
 		String filepath = System.getProperty("user.dir")+"/src/main/java/testdata/PWData.xlsx";
+		AddAutoCharge.waitForLeases();
 		newLease.leases().click();
 		newLease.newLeaseLink().click();
 		newLeaseWithLeaseForm.leaseForm();
@@ -48,7 +49,7 @@ Excel_Reader xlReader = new Excel_Reader();
 		newLeaseWithLeaseForm.costEstimate().sendKeys(Keys.chord(Keys.CONTROL, "a"));
 		newLeaseWithLeaseForm.costEstimate().sendKeys("$50");
 		newLease.saveLease();
-		newLeaseWithLeaseForm.cancel();
+		newLease.cancel();
 		NewLeaseFromLeasePage.leaseSummaryLink().click();
 	}
 }

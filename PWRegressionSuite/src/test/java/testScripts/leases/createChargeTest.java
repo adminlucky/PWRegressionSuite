@@ -4,6 +4,7 @@ import java.io.IOException;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
+import pageObjects.Leases.AddAutoCharge;
 import pageObjects.Leases.Login;
 import pageObjects.Leases.MoveoutAndTerminateLease;
 import pageObjects.Leases.createCharge;
@@ -17,7 +18,7 @@ public class createChargeTest extends TestBase {
 	public void createCharge() throws IOException, InterruptedException{
 		test=extent.createTest("createCharge");
 		Login.refreshPage();
-		Login.homePage().click();
+		AddAutoCharge.waitForLeases();
 		newLease.leases().click();
 		newLease.activeLeases().click();
 		MoveoutAndTerminateLease.firstActiveLease().click();
@@ -25,7 +26,7 @@ public class createChargeTest extends TestBase {
 		createCharge.newCharge().click();
 		createCharge.selectAccount();
 		createCharge.chargeRef().sendKeys("1234");
-		createCharge.amount().sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
+		createCharge.amount().sendKeys(Keys.chord(Keys.CONTROL, "a"));
 		createCharge.amount().sendKeys("250");
 		createCharge.chargeDate();
 		createCharge.chargeComment().sendKeys("New charge in lease ledger");

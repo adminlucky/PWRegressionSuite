@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import pageObjects.Leases.AddAutoCharge;
 import pageObjects.Leases.ApplySecDepCharges;
 import pageObjects.Leases.EditLease;
 import pageObjects.Leases.LeaseLedger;
@@ -19,7 +20,7 @@ public class ApplySecDepToChargesTest extends TestBase {
 	public void applySecDepToCharges() throws IOException, InterruptedException{
 	test=extent.createTest("applySecDepToCharges");
 	Login.refreshPage();
-	Login.homePage().click();
+	AddAutoCharge.waitForLeases();
 	newLease.leases().click();
 	newLease.activeLeases().click();
 	EditLease.firstLease().click();

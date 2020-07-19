@@ -3,6 +3,8 @@ package testScripts.leases;
 import java.io.IOException;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
+
+import pageObjects.Leases.AddAutoCharge;
 import pageObjects.Leases.EditLease;
 import pageObjects.Leases.Login;
 import pageObjects.Leases.newLease;
@@ -16,7 +18,7 @@ public class EditLeaseTest extends TestBase {
 	public void editLease() throws IOException, InterruptedException{
 	test=extent.createTest("editLease");
 	Login.refreshPage();
-	Login.homePage().click();
+	AddAutoCharge.waitForLeases();
 	newLease.leases().click();
 	newLease.activeLeases().click();
 	EditLease.firstLease().click();

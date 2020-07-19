@@ -4,6 +4,7 @@ import java.io.IOException;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
+import pageObjects.Leases.AddAutoCharge;
 import pageObjects.Leases.EditLease;
 import pageObjects.Leases.LeaseNewWorkorder;
 import pageObjects.Leases.Login;
@@ -18,7 +19,7 @@ public class LeaseNewWorkorderTest extends TestBase {
 	public void newWorkorder() throws IOException, InterruptedException{
 	test=extent.createTest("newWorkorder");
 	Login.refreshPage();
-	Login.homePage().click();
+	AddAutoCharge.waitForLeases();
 	newLease.leases().click();
 	EditLease.firstLease().click();
 	UtilityMethods.scrollDownHalf(driver);

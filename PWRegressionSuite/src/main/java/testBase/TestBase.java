@@ -64,10 +64,6 @@ public class TestBase extends config_Reader {
 		extent.setSystemInfo("User","Krishna");
 		initialization();
 	}
-	/*@BeforeTest
-	public void init() throws IOException{
-		
-	}*/
 	/*@BeforeMethod
 	public void NamingTest(Method mtd){
 		test=extent.createTest(mtd.getName());
@@ -81,13 +77,13 @@ public class TestBase extends config_Reader {
 			{
 			 test.log(Status.FAIL, "Test Case Failed is: "+result.getName());
 			 test.fail(result.getThrowable());
-			 driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+			 //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 			 String screenshotPath = UtilityMethods.takeScreenshot(driver, result.getName());
 			 test.addScreenCaptureFromPath(screenshotPath);
-			 //added for betterment
-			 //driver.close();
-			 //initialization();
 			 }
+			else if(result.getStatus() == ITestResult.SUCCESS){
+				 test.log(Status.PASS, "Test Case passed is: "+result.getName());
+			  }
 			else if(result.getStatus() == ITestResult.STARTED){
 				test.info("Test started");
 			 }
@@ -95,15 +91,12 @@ public class TestBase extends config_Reader {
 				test.log(Status.SKIP, "Test Case Skipped is: "+result.getName());
 				test.info("Test skipped");
 			 }
-			 else if(result.getStatus() == ITestResult.SUCCESS){
-				 test.log(Status.PASS, "Test Case passed is: "+result.getName());
-			  }
 			
-			 //newLease.leases().click();
-			//driver.close();
 	}
+	
 	@AfterSuite
 		public void tearDown(){
 		extent.flush();
+		//driver.close();
     }
 }

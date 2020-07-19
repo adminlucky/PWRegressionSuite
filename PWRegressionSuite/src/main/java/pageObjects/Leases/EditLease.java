@@ -23,13 +23,13 @@ public class EditLease extends TestBase {
 	}
 	
 	public static void activeToEviction(){
-		(new Select(driver.findElement(By.xpath("//select[@id='entity.status']")))).selectByIndex(3);
+		(new Select(driver.findElement(By.xpath("//select[@id='entity.status']")))).selectByVisibleText("Eviction");
 	}
 	public static void activeToTerminate(){
-		(new Select(driver.findElement(By.xpath("//select[@id='entity.status']")))).selectByIndex(4);
+		(new Select(driver.findElement(By.xpath("//select[@id='entity.status']")))).selectByVisibleText("Terminated");
 	}
 	public static void draftToActive(){
-		(new Select(driver.findElement(By.xpath("//select[@id='entity.status']")))).selectByIndex(0);
+		(new Select(driver.findElement(By.xpath("//select[@id='entity.status']")))).selectByVisibleText("Active");
 	}
 		
 	public static void publicAssistance(){
@@ -43,8 +43,8 @@ public class EditLease extends TestBase {
 		UtilityMethods.waitForElementToBeInvisible(driver, "//form[@id='leaseEditForm']");
 	}
 	public static void saveEviction(){
-		//driver.findElement(By.xpath("(//input[@onclick='save()'])[1]")).click();
-		driver.findElement(By.xpath("//div[@class='primaryButtons']//following::input")).click();
+		(new WebDriverWait(driver, 5)).until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[@class='primaryButtons']//following::input)[1]")));
+		driver.findElement(By.xpath("(//div[@class='primaryButtons']//following::input)[1]")).click();
 		//UtilityMethods.waitForElementToBeInvisible(driver, "//form[@id='leaseEditForm']");
 	}
 	public static void saveTerminate(){
@@ -72,8 +72,7 @@ public class EditLease extends TestBase {
 	
 	//Date not changing when date is already there  
 	public static void inspectionStartDate(){
-		WebDriverWait wait = new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name='leaseInspectionStartDateAsString']")));
+		(new WebDriverWait(driver, 5)).until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name='leaseInspectionStartDateAsString']")));
 		String date = new SimpleDateFormat("MM/dd/yyyy").format(new Date());
 		driver.findElement(By.xpath("//input[@name='leaseInspectionStartDateAsString']")).sendKeys(date);
 	}
@@ -83,6 +82,11 @@ public class EditLease extends TestBase {
 	public static WebElement inspectionDesc(){
 		return driver.findElement(By.name("entity.leaseInspectionRecurrence.description"));
 	}
+	public static WebElement removeLocation(){
+		return driver.findElement(By.xpath("//a[@class='delete']"));
+	}
+	
+	
 	
 	
 }

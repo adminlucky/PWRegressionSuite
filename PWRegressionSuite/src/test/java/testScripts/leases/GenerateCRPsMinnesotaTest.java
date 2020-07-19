@@ -2,6 +2,8 @@ package testScripts.leases;
 
 import java.io.IOException;
 import org.testng.annotations.Test;
+
+import pageObjects.Leases.AddAutoCharge;
 import pageObjects.Leases.EditLease;
 import pageObjects.Leases.GenerateCRPs;
 import pageObjects.Leases.Login;
@@ -15,7 +17,7 @@ public class GenerateCRPsMinnesotaTest extends TestBase {
 	public void generateCRPsMinnesota() throws IOException, InterruptedException{
 	test=extent.createTest("generateCRPsMinnesota");
 	Login.refreshPage();
-	Login.homePage().click();
+	AddAutoCharge.waitForLeases();
 	newLease.leases().click();
 	newLease.activeLeases().click();
 	GenerateCRPs.createdDateLink().click();

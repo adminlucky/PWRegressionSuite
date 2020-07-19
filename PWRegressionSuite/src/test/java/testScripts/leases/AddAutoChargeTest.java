@@ -19,9 +19,10 @@ public class AddAutoChargeTest extends TestBase {
 	@Test
 	public void addAutoCharge() throws IOException, InterruptedException{
 	test=extent.createTest("addAutoCharge");
-	Login.refreshPage();
-	Login.homePage().click();
+	
+	AddAutoCharge.waitForLeases();
 	newLease.leases().click();
+	AddAutoCharge.changeTimeout();
 	newLease.activeLeases().click();
 	MoveoutAndTerminateLease.firstActiveLease().click();
 	NewLeaseFromLeasePage.leaseSummaryLink().click();
@@ -29,9 +30,10 @@ public class AddAutoChargeTest extends TestBase {
 	AddAutoCharge.newAutoCharge().click();
 	AddAutoCharge.startDate();
 	AddAutoCharge.amount().sendKeys(Keys.chord(Keys.CONTROL, "a"));
-	AddAutoCharge.amount().sendKeys("901");
+	AddAutoCharge.amount().sendKeys("800");
 	AddAutoCharge.desc().sendKeys("Monthly Rent auto charge");
 	AddAutoCharge.saveAutoCharge();
 	EditLease.saveLease();	
+	
 	}
 }

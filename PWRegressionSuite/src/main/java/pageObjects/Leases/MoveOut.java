@@ -17,10 +17,26 @@ public class MoveOut extends TestBase {
 	}
 	
 	public static void reason(){
+		driver.findElement(By.xpath("//td[2]//a[1]//img[1]")).click();
 		(new Select(driver.findElement(By.name("entity.reasonForLeaving")))).selectByVisibleText("MOVE CITY");
 	}
 	
 	public static WebElement save(){
 		return driver.findElement(By.xpath("(//input[@value='Save'])[1]"));
 	}
+	public static WebElement moveIn(){
+		return driver.findElement(By.xpath("//input[@class='button redBack']"));
+	}
+	public static WebElement leaseFeeRefNo(){
+		return driver.findElement(By.xpath("//input[@name='leaseFeeRefNo']"));
+	}
+	public static WebElement paidCheckbox(){
+		return driver.findElement(By.id("leaseDetailForm.leaseFeePaid"));
+	}
+	public static WebElement toBePrinted(){
+		return driver.findElement(By.id("leaseDetailForm.leaseFeetoBePrinted"));
+	}
+	
+	
+	
 }

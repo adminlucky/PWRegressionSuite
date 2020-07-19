@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
+import pageObjects.Leases.AddAutoCharge;
 import pageObjects.Leases.Login;
 import pageObjects.Leases.MoveoutAndTerminateLease;
 import pageObjects.Leases.adjustments;
@@ -17,7 +18,7 @@ public class createRefundTest extends TestBase {
 	public void createRefund() throws IOException, InterruptedException{
 		test=extent.createTest("createRefund");
 		Login.refreshPage();
-		Login.homePage().click();
+		AddAutoCharge.waitForLeases();
 		newLease.leases().click();
 		newLease.activeLeases().click();
 		MoveoutAndTerminateLease.firstActiveLease().click();
@@ -25,7 +26,7 @@ public class createRefundTest extends TestBase {
 		adjustments.adjustmentsButton().click();
 		adjustments.refund().click();
 		adjustments.payFrom();
-		adjustments.amount().sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
+		adjustments.amount().sendKeys(Keys.chord(Keys.CONTROL,"a"));
 		adjustments.amount().sendKeys("-5");
 		adjustments.comment().sendKeys("Refund for testing purpose");
 		adjustments.save();

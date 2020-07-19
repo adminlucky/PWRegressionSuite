@@ -22,8 +22,8 @@ public class CreateNewLeaseTest extends TestBase {
 	public void createLease() throws IOException, InterruptedException{
 		test=extent.createTest("createLease");
 		Login.refreshPage();
-		Login.homePage().click();
 		String filepath = System.getProperty("user.dir")+"/src/main/java/testdata/PWData.xlsx";
+		AddAutoCharge.waitForLeases();
 		newLease.leases().click();
 		newLease.newLeaseLink().click();
 		newLease.location().click();
