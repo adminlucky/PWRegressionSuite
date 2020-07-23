@@ -25,7 +25,7 @@ public class CreateNewLeasefromSummaryTest extends TestBase {
 		AddAutoCharge.waitForLeases();
 		newLease.leases().click();
 		EditLease.firstLease().click();
-		NewLeaseFromLeasePage.leaseSummaryLink().click();
+		NewLeaseFromLeasePage.leaseSummaryLink();
 		NewLeaseFromLeasePage.newLeaseButton().click(); 
 		newLease.location().click();
 		newLease.selectLocation().click();
@@ -47,7 +47,7 @@ public class CreateNewLeasefromSummaryTest extends TestBase {
 		newLease.unScheduleInspection();
 		newLease.saveLease();
 		newLease.cancel();
-		NewLeaseFromLeasePage.leaseSummaryLink().click();
+		NewLeaseFromLeasePage.leaseSummaryLink();
 	}
 
 }

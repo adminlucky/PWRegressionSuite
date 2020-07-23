@@ -2,6 +2,9 @@ package pageObjects.Leases;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import testBase.TestBase;
 import utilities.UtilityMethods;
 
@@ -24,8 +27,15 @@ public class newLeaseWithExistingContact extends TestBase {
 	public static void saveContact(){
 		driver.findElement(By.xpath("//div[@id='primaryButtons']//input[1]")).click();
 		//To handle prospect contact
-		
-		UtilityMethods.waitForElementToBeInvisible(driver, "//div[@id='addContactForm']");
+		if(driver.findElements(By.xpath("//div[@id='editProspectStatus']")).size() > 0){
+			(new WebDriverWait(driver, 5)).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='Buttons']//input[1]")));
+			driver.findElement(By.xpath("//div[@class='Buttons']//input[1]")).click();
+			(new WebDriverWait(driver, 5)).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@id='editProspectStatus']")));
+		}
+		else{
+			(new WebDriverWait(driver, 5)).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@id='addContactForm']")));
+			//UtilityMethods.waitForElementToBeInvisible(driver, "//div[@id='addContactForm']");
+		}
 	}
 	
 }

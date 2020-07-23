@@ -22,7 +22,7 @@ public class CreateSingleTaskTest extends TestBase {
 	newLease.leases().click();
 	newLease.activeLeases().click();
 	EditLease.firstLease().click();
-	NewLeaseFromLeasePage.leaseSummaryLink().click();
+	NewLeaseFromLeasePage.leaseSummaryLink();
 	CreateTasks.tasksTab().click();
 	CreateTasks.newTask().click();
 	CreateTasks.taskDesc().sendKeys("Single task created from lease");

@@ -31,7 +31,7 @@ public class createAdjustmentTest extends TestBase {
 		adjustments.amount().sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
 		adjustments.amount().sendKeys("21");
 		adjustments.comment().sendKeys("Adjustment for testing purpose");
-		adjustments.save();
+		adjustments.saveAdj();
 	}
 	
 }

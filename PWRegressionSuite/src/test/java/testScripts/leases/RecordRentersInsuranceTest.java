@@ -24,7 +24,7 @@ public class RecordRentersInsuranceTest extends TestBase {
 	newLease.leases().click();
 	newLease.activeLeases().click();
 	EditLease.firstLease().click();
-	NewLeaseFromLeasePage.leaseSummaryLink().click();
+	NewLeaseFromLeasePage.leaseSummaryLink();
 	RentersInsurance.rentersInsuranceTab().click();
 	RentersInsurance.recordPolicy().click();
 	RentersInsurance.policyNumber().sendKeys("2479341");

@@ -2,7 +2,9 @@ package pageObjects.Leases;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import testBase.TestBase;
 
@@ -12,6 +14,7 @@ public class LeaseNewWorkorder extends TestBase {
 		return driver.findElement(By.xpath("//a[contains(text(),'New Work Order')]"));
 	}
 	public static void source(){
+		(new WebDriverWait(driver, 5)).until(ExpectedConditions.elementToBeClickable(By.xpath("//select[@name='entity.source']")));
 		(new Select(driver.findElement(By.xpath("//select[@name='entity.source']")))).selectByVisibleText("Email");
 	}
 	public static WebElement tenantPortal(){

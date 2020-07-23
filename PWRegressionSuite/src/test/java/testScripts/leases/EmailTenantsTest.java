@@ -22,16 +22,17 @@ public class EmailTenantsTest extends TestBase {
 	//Login.refreshPage();
 	AddAutoCharge.waitForLeases();
 	newLease.leases().click();
-	EmailTenants.emailTenants().click();
-	EmailTenants.selectmultipleTenants();
-	EmailTenants.email().click();
+	newLease.activeLeases().click();
+	EmailTenants.selectMultipleLeases();
+	EmailTenants.emailButton().click();
 	EmailTenants.emailTemplate();
-	EmailTenants.body().sendKeys(Keys.chord(Keys.CONTROL, "a"));
-	EmailTenants.body().sendKeys("Sample email body for tenant emails");
+	EmailTenants.subject().sendKeys(Keys.chord(Keys.CONTROL, "a"));
+	EmailTenants.subject().sendKeys("Tenant emails");
+	EmailTenants.emailBody();
 	//Need to implement attaching file
 	//EmailTenants.attachFilesB().click();
 	//EmailTenants.file().sendKeys("C:\\Propertyware\\Propertyware Documents\\Sample files\\RentMoneyVoucher.pdf");
-	EmailTenants.send().click();
+	//EmailTenants.send();
 	
 	
 	}

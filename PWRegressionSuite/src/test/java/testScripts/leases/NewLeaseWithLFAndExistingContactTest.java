@@ -44,6 +44,6 @@ Excel_Reader xlReader = new Excel_Reader();
 		newLeaseWithLeaseForm.costEstimate().sendKeys("$75");
 		newLease.saveLease();
 		newLeaseWithLeaseForm.cancel();
-		NewLeaseFromLeasePage.leaseSummaryLink().click();
+		NewLeaseFromLeasePage.leaseSummaryLink();
 	}
 }

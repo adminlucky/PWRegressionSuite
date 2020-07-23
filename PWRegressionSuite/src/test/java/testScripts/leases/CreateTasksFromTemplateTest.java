@@ -22,7 +22,7 @@ public class CreateTasksFromTemplateTest extends TestBase {
 	newLease.leases().click();
 	newLease.activeLeases().click();
 	EditLease.firstLease().click();
-	NewLeaseFromLeasePage.leaseSummaryLink().click();
+	NewLeaseFromLeasePage.leaseSummaryLink();
 	CreateTasks.tasksTab().click();
 	CreateTasks.loadFromTemplate().click();
 	CreateTasks.selectTemplate();

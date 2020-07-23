@@ -29,7 +29,7 @@ public class createRefundTest extends TestBase {
 		adjustments.amount().sendKeys(Keys.chord(Keys.CONTROL,"a"));
 		adjustments.amount().sendKeys("-5");
 		adjustments.comment().sendKeys("Refund for testing purpose");
-		adjustments.save();
+		adjustments.saveAdj();
 	}
 
 }

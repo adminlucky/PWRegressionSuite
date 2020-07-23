@@ -15,7 +15,7 @@ public class DeleteLeaseTest extends TestBase {
 	@Test
 	public void deleteLease() throws IOException, InterruptedException{
 	test=extent.createTest("deleteLease");
-	Login.refreshPage();
+	//Login.refreshPage();
 	AddAutoCharge.waitForLeases();
 	newLease.leases().click();
 	newLease.draftLeases().click();

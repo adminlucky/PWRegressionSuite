@@ -3,16 +3,6 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Regression Suite]">
   <test name="Leases Test(failed)">
     <classes>
-      <class name="testScripts.leases.EditLeasesViewTest">
-        <methods>
-          <include name="getResult"/>
-        </methods>
-      </class> <!-- testScripts.leases.EditLeasesViewTest -->
-      <class name="testScripts.leases.LeasesViewSetAsDefaultTest">
-        <methods>
-          <include name="getResult"/>
-        </methods>
-      </class> <!-- testScripts.leases.LeasesViewSetAsDefaultTest -->
       <class name="testScripts.leases.EmailTenantsTest">
         <methods>
           <include name="reportSetup"/>
@@ -21,11 +11,12 @@
           <include name="getResult"/>
         </methods>
       </class> <!-- testScripts.leases.EmailTenantsTest -->
-      <class name="testScripts.leases.CreateLeasesNewViewTest">
+      <class name="testScripts.leases.EmailAllTenantsTest">
         <methods>
+          <include name="emailAllTenants"/>
           <include name="getResult"/>
         </methods>
-      </class> <!-- testScripts.leases.CreateLeasesNewViewTest -->
+      </class> <!-- testScripts.leases.EmailAllTenantsTest -->
     </classes>
   </test> <!-- Leases Test(failed) -->
 </suite> <!-- Failed suite [Regression Suite] -->

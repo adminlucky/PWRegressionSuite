@@ -22,7 +22,7 @@ public class newLease extends TestBase {
 	
 	public static WebElement leases(){
 		//UtilityMethods.waitForElementToBeClickable(driver, "//div[3]/div[2]/div[2]/ul[1]/li[5]/a[1]");
-		//(new WebDriverWait(driver, 5)).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[3]/div[2]/div[2]/ul[1]/li[5]/a[1]")));
+		(new WebDriverWait(driver, 5)).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[3]/div[2]/div[2]/ul[1]/li[5]/a[1]")));
 		return driver.findElement(By.xpath("//div[3]/div[2]/div[2]/ul[1]/li[5]/a[1]"));
 	}
 	public static WebElement activeLeases(){

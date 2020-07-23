@@ -6,16 +6,14 @@
   <test name="Leases Test">
     
     <classes>
-	 <class name="testScripts.leases.EmailTenantsTest"/>
-       <class name="testScripts.leases.CreateLeasesNewViewTest"/> 
-       <class name="testScripts.leases.LeasesViewSetAsDefaultTest"/>
-      <class name="testScripts.leases.EditLeasesViewTest"/>
+      <class name="testScripts.leases.EmailTenantsTest"/>
+	  <class name="testScripts.leases.EmailAllTenantsTest"/>
       
-     
+      
 	</classes>  
 	
 	
-	 <!--<packages>
+	<!-- <packages>
             <package name="testScripts.leases.*"/>
     </packages>-->
     

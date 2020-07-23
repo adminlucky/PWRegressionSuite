@@ -2,7 +2,9 @@ package pageObjects.Leases;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import testBase.TestBase;
 
@@ -40,6 +42,7 @@ public class GenerateCRPs extends TestBase {
 		return driver.findElement(By.xpath("//input[@value='Attach to Lease Documents']"));
 	}
 	public static WebElement done(){
+		(new WebDriverWait(driver, 5)).until(ExpectedConditions.visibilityOfElementLocated((By.xpath("//div[@id='crpGenerated']"))));
 		return driver.findElement(By.xpath("//input[@value='Done']"));
 	}
 	

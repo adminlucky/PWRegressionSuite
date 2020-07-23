@@ -11,8 +11,11 @@ public class ApplySecDepCharges extends TestBase {
 		return driver.findElement(By.xpath("//a[contains(text(),'Apply SECDEP to Charges')]"));
 	}
 	public static boolean checkUnpaidChargesExist(){
+		if(driver.findElements(By.xpath("//table[@class='list']//th[contains(text(),'Date')]")).size() > 0){
 		String charges = driver.findElement(By.xpath("//table[@class='list']//th[contains(text(),'Date')]")).getText();
 		return !charges.equalsIgnoreCase("No Charges");
+		}
+		return false;
 	}
 	public static WebElement amountDue(){
 		return driver.findElement(By.xpath("//table[2]/tbody[1]/tr[1]/td[5]"));

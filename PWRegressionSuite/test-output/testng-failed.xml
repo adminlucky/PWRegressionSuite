@@ -1,31 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Regression Suite]">
-  <test name="Leases Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="testScripts.leases.EditLeasesViewTest">
+      <class name="testScripts.leases.CreateNoteTest">
         <methods>
-          <include name="getResult"/>
-        </methods>
-      </class> <!-- testScripts.leases.EditLeasesViewTest -->
-      <class name="testScripts.leases.LeasesViewSetAsDefaultTest">
-        <methods>
-          <include name="getResult"/>
-        </methods>
-      </class> <!-- testScripts.leases.LeasesViewSetAsDefaultTest -->
-      <class name="testScripts.leases.EmailTenantsTest">
-        <methods>
+          <include name="createNote"/>
           <include name="reportSetup"/>
           <include name="tearDown"/>
-          <include name="emailTenants"/>
           <include name="getResult"/>
         </methods>
-      </class> <!-- testScripts.leases.EmailTenantsTest -->
-      <class name="testScripts.leases.CreateLeasesNewViewTest">
-        <methods>
-          <include name="getResult"/>
-        </methods>
-      </class> <!-- testScripts.leases.CreateLeasesNewViewTest -->
+      </class> <!-- testScripts.leases.CreateNoteTest -->
     </classes>
-  </test> <!-- Leases Test(failed) -->
-</suite> <!-- Failed suite [Regression Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -18,8 +18,10 @@ public class EditLease extends TestBase {
 		return driver.findElement(By.xpath("//td[@id='cell_0_0']//self::a"));
 	}
 	
-	public static WebElement edit(){
-		return driver.findElement(By.xpath("//div[@class='primaryButtons']//input[2]"));
+	public static void edit(){
+		(new WebDriverWait(driver, 5)).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='primaryButtons']//input[2]")));
+		driver.findElement(By.xpath("//div[@class='primaryButtons']//input[2]")).click();
+		(new WebDriverWait(driver, 5)).until(ExpectedConditions.elementToBeClickable(By.xpath("//select[@id='entity.status']")));
 	}
 	
 	public static void activeToEviction(){
@@ -58,8 +60,7 @@ public class EditLease extends TestBase {
 	}
 	
 	public static void vacatedDate(){
-		WebDriverWait wait = new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name='entity.moveOutDateAsString']")));
+	    (new WebDriverWait(driver, 5)).until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name='entity.moveOutDateAsString']")));
 		String date = new SimpleDateFormat("MM/dd/yyyy").format(new Date());
 		driver.findElement(By.xpath("//input[@name='entity.moveOutDateAsString']")).sendKeys(date);
 	}
@@ -83,6 +84,7 @@ public class EditLease extends TestBase {
 		return driver.findElement(By.name("entity.leaseInspectionRecurrence.description"));
 	}
 	public static WebElement removeLocation(){
+		(new WebDriverWait(driver, 5)).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@class='delete']")));
 		return driver.findElement(By.xpath("//a[@class='delete']"));
 	}
 	

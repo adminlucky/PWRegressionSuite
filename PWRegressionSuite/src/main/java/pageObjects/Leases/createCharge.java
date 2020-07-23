@@ -5,7 +5,10 @@ import java.util.Date;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import testBase.TestBase;
 
 public class createCharge extends TestBase {
@@ -34,7 +37,8 @@ public class createCharge extends TestBase {
 	public static WebElement chargeComment(){
 		return driver.findElement(By.xpath("//input[@name='charge.comments']"));
 	}
-	public static WebElement saveCharge(){
-		return driver.findElement(By.xpath("//input[@value='Save']"));
+	public static void saveCharge(){
+		driver.findElement(By.xpath("//input[@value='Save']"));
+		(new WebDriverWait(driver, 5)).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[3]/div[2]/div[2]/ul[1]/li[5]/a[1]")));
 	}
 }

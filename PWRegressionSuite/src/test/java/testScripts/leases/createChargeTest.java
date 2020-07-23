@@ -30,6 +30,6 @@ public class createChargeTest extends TestBase {
 		createCharge.amount().sendKeys("250");
 		createCharge.chargeDate();
 		createCharge.chargeComment().sendKeys("New charge in lease ledger");
-		createCharge.saveCharge().click();
+		createCharge.saveCharge();
 	}
 }

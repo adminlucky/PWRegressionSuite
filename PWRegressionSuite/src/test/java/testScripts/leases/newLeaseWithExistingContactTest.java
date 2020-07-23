@@ -42,7 +42,7 @@ public class NewLeaseWithExistingContactTest extends TestBase {
 		newLease.unScheduleInspection();
 		newLease.saveLease();
 		newLease.cancel();
-		NewLeaseFromLeasePage.leaseSummaryLink().click();
+		NewLeaseFromLeasePage.leaseSummaryLink();
 	}
 
 }

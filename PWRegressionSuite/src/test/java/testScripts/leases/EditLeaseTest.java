@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import pageObjects.Leases.AddAutoCharge;
 import pageObjects.Leases.EditLease;
 import pageObjects.Leases.Login;
+import pageObjects.Leases.NewLeaseFromLeasePage;
 import pageObjects.Leases.newLease;
 import testBase.TestBase;
 
@@ -22,7 +23,8 @@ public class EditLeaseTest extends TestBase {
 	newLease.leases().click();
 	newLease.activeLeases().click();
 	EditLease.firstLease().click();
-	EditLease.edit().click();
+	NewLeaseFromLeasePage.leaseSummaryLink();
+	EditLease.edit();
 	EditLease.activeToEviction();
 	EditLease.publicAssistance();
 	//text overwrite

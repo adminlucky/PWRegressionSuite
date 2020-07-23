@@ -30,7 +30,7 @@ public class adjustments extends TestBase {
 	public static WebElement comment(){
 		return driver.findElement(By.xpath("//input[@name='refund.comments']"));
 	}
-	public static void save(){
+	public static void saveAdj(){
 		driver.findElement(By.xpath("//form[1]/div[10]/div[4]/input[1]")).click();
 		UtilityMethods.waitForElementToBeInvisible(driver, "//div[@id='editRefundFormContainer']");
 	}

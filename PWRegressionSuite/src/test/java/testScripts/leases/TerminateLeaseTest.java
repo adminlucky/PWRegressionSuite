@@ -8,6 +8,7 @@ import pageObjects.Leases.AddAutoCharge;
 import pageObjects.Leases.EditLease;
 import pageObjects.Leases.Login;
 import pageObjects.Leases.MoveoutAndTerminateLease;
+import pageObjects.Leases.NewLeaseFromLeasePage;
 import pageObjects.Leases.newLease;
 import testBase.TestBase;
 
@@ -22,7 +23,8 @@ public class TerminateLeaseTest extends TestBase {
 	newLease.leases().click();
 	newLease.activeLeases().click();
 	MoveoutAndTerminateLease.firstActiveLease().click();
-	EditLease.edit().click();
+	NewLeaseFromLeasePage.leaseSummaryLink();
+	EditLease.edit();
 	EditLease.activeToTerminate();
 	EditLease.publicAssistance();
 	EditLease.description().sendKeys(Keys.END, " - Lease status changed from Active to Terminated");

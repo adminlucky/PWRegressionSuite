@@ -13,20 +13,19 @@ import pageObjects.Leases.newLease;
 import testBase.TestBase;
 import utilities.UtilityMethods;
 
-
 public class AddAutoChargeTest extends TestBase {
 	
 	@Test
 	public void addAutoCharge() throws IOException, InterruptedException{
 	test=extent.createTest("addAutoCharge");
-	
+	//Login.refreshPage();
 	AddAutoCharge.waitForLeases();
 	newLease.leases().click();
 	AddAutoCharge.changeTimeout();
 	newLease.activeLeases().click();
 	MoveoutAndTerminateLease.firstActiveLease().click();
-	NewLeaseFromLeasePage.leaseSummaryLink().click();
-	EditLease.edit().click();
+	NewLeaseFromLeasePage.leaseSummaryLink();
+	EditLease.edit();
 	AddAutoCharge.newAutoCharge().click();
 	AddAutoCharge.startDate();
 	AddAutoCharge.amount().sendKeys(Keys.chord(Keys.CONTROL, "a"));

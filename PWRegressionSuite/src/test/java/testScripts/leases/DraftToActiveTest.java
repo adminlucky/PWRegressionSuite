@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import pageObjects.Leases.AddAutoCharge;
 import pageObjects.Leases.EditLease;
 import pageObjects.Leases.Login;
+import pageObjects.Leases.NewLeaseFromLeasePage;
 import pageObjects.Leases.newLease;
 import testBase.TestBase;
 
@@ -21,7 +22,8 @@ public class DraftToActiveTest extends TestBase {
 	newLease.leases().click();
 	newLease.draftLeases().click();
 	EditLease.firstLease().click();
-	EditLease.edit().click();
+	NewLeaseFromLeasePage.leaseSummaryLink();
+	EditLease.edit();
 	EditLease.removeLocation().click();
 	newLease.location().click();
 	newLease.selectLocation().click();

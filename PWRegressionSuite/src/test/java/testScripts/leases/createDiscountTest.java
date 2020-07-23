@@ -33,7 +33,7 @@ public class createDiscountTest extends TestBase {
 		adjustments.amount().sendKeys(Keys.chord(Keys.CONTROL,"a"));
 		adjustments.amount().sendKeys("-26");
 		adjustments.comment().sendKeys("Discount for testing purpose");
-		adjustments.save();
+		adjustments.saveAdj();
 			
 	}
 
