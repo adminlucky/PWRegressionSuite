@@ -13,7 +13,7 @@ import pageObjects.Leases.clearUnpaidCharges;
 import pageObjects.Leases.newLease;
 import testBase.TestBase;
 
-public class clearUnpaidChargesTest extends TestBase {
+public class ClearUnpaidChargesTest extends TestBase {
 	@Test
 	public void clearUnpaidCharges() throws IOException, InterruptedException{
 		test=extent.createTest("clearUnpaidCharges");

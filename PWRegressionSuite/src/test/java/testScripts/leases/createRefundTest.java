@@ -12,7 +12,7 @@ import pageObjects.Leases.adjustments;
 import pageObjects.Leases.newLease;
 import testBase.TestBase;
 
-public class createRefundTest extends TestBase {
+public class CreateRefundTest extends TestBase {
 	
 	@Test
 	public void createRefund() throws IOException, InterruptedException{

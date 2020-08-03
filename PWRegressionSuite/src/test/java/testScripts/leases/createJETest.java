@@ -15,7 +15,7 @@ import testBase.TestBase;
 import utilities.UtilityMethods;
 
 
-public class createJETest extends TestBase {
+public class CreateJETest extends TestBase {
 	@Test
 	public void createNewJE() throws IOException, InterruptedException{
 		test=extent.createTest("createNewJE");

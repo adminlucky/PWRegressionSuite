@@ -11,7 +11,7 @@ import pageObjects.Leases.createPayment;
 import pageObjects.Leases.newLease;
 import testBase.TestBase;
 
-public class createPaymentTest extends TestBase {
+public class CreatePaymentTest extends TestBase {
 
 	@Test
 	public void createPayment() throws IOException, InterruptedException{

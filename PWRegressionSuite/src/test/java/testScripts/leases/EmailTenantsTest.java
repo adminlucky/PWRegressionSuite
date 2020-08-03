@@ -17,8 +17,8 @@ import testBase.TestBase;
 public class EmailTenantsTest extends TestBase {
 	
 	@Test
-	public void emailTenants() throws IOException, InterruptedException{
-	test=extent.createTest("emailTenants");
+	public void emailTenantsTest() throws IOException, InterruptedException{
+	test=extent.createTest("EmailTenantsTest");
 	//Login.refreshPage();
 	AddAutoCharge.waitForLeases();
 	newLease.leases().click();
@@ -26,9 +26,9 @@ public class EmailTenantsTest extends TestBase {
 	EmailTenants.selectMultipleLeases();
 	EmailTenants.emailButton().click();
 	EmailTenants.emailTemplate();
-	EmailTenants.subject().sendKeys(Keys.chord(Keys.CONTROL, "a"));
-	EmailTenants.subject().sendKeys("Tenant emails");
-	EmailTenants.emailBody();
+	//EmailTenants.subject().sendKeys(Keys.CONTROL, "a");
+	//EmailTenants.subject().sendKeys("Tenant emails");
+	//EmailTenants.emailBody();
 	//Need to implement attaching file
 	//EmailTenants.attachFilesB().click();
 	//EmailTenants.file().sendKeys("C:\\Propertyware\\Propertyware Documents\\Sample files\\RentMoneyVoucher.pdf");

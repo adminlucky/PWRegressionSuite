@@ -14,7 +14,7 @@ import pageObjects.Leases.newLease;
 import testBase.TestBase;
 
 
-public class createAdjustmentTest extends TestBase {
+public class CreateAdjustmentTest extends TestBase {
 	
 	@Test
 	public void createAdjustment() throws IOException, InterruptedException{

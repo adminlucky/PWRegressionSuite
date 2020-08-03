@@ -15,7 +15,7 @@ import pageObjects.Leases.newLease;
 import testBase.TestBase;
 import utilities.UtilityMethods;
 
-public class createDiscountTest extends TestBase {
+public class CreateDiscountTest extends TestBase {
 	
 	@Test
 	public void createDiscount() throws IOException, InterruptedException{

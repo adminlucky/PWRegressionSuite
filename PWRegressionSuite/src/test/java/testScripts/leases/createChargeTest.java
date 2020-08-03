@@ -11,7 +11,7 @@ import pageObjects.Leases.createCharge;
 import pageObjects.Leases.newLease;
 import testBase.TestBase;
 
-public class createChargeTest extends TestBase {
+public class CreateChargeTest extends TestBase {
 	
 	//This test will validate the new charge creation for an active lease 
 	@Test
