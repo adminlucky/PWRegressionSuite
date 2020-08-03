@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Regression Suite]">
-  <test name="Leases Test(failed)">
-    <classes>
-      <class name="testScripts.leases.EmailTenantsTest">
-        <methods>
-          <include name="reportSetup"/>
-          <include name="tearDown"/>
-          <include name="emailTenants"/>
-          <include name="getResult"/>
-        </methods>
-      </class> <!-- testScripts.leases.EmailTenantsTest -->
-      <class name="testScripts.leases.EmailAllTenantsTest">
-        <methods>
-          <include name="emailAllTenants"/>
-          <include name="getResult"/>
-        </methods>
-      </class> <!-- testScripts.leases.EmailAllTenantsTest -->
-    </classes>
-  </test> <!-- Leases Test(failed) -->
+<suite guice-stage="DEVELOPMENT"
+	name="Failed suite [Regression Suite]">
+	<test name="Leases Test(failed)">
+		<classes>
+			<class name="testScripts.leases.EmailTenantsTest">
+				<methods>
+					<include name="reportSetup" />
+					<include name="tearDown" />
+					<include name="emailTenants" />
+					<include name="getResult" />
+				</methods>
+			</class> <!-- testScripts.leases.EmailTenantsTest -->
+			<class name="testScripts.leases.EmailAllTenantsTest">
+				<methods>
+					<include name="emailAllTenants" />
+					<include name="getResult" />
+				</methods>
+			</class> <!-- testScripts.leases.EmailAllTenantsTest -->
+		</classes>
+	</test> <!-- Leases Test(failed) -->
 </suite> <!-- Failed suite [Regression Suite] -->

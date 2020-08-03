@@ -2,20 +2,18 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="Regression Suite">
-  
-  <test name="Leases Test">
-    
-    <classes>
-      <class name="testScripts.leases.EmailTenantsTest"/>
-	  <class name="testScripts.leases.EmailAllTenantsTest"/>
-      
-      
-	</classes>  
-	
-	
-	<!-- <packages>
-            <package name="testScripts.leases.*"/>
-    </packages>-->
-    
-  </test> <!-- Test -->
+
+	<test name="Leases Test">
+
+		<classes>
+			<class name="testScripts.leases.EmailTenantsTest" />
+			<class name="testScripts.leases.EmailAllTenantsTest" />
+
+
+		</classes>
+
+
+		<!-- <packages> <package name="testScripts.leases.*"/> </packages> -->
+
+	</test> <!-- Test -->
 </suite> <!-- Suite -->

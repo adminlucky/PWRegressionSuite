@@ -24,24 +24,5 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/RAMAKRISHNA/Personal/Automation/Drivers and Jars/java jar_files/access-bridge-64.jar"/>
-	<classpathentry kind="lib" path="C:/RAMAKRISHNA/Personal/Automation/Drivers and Jars/java jar_files/charsets.jar"/>
-	<classpathentry kind="lib" path="C:/RAMAKRISHNA/Personal/Automation/Drivers and Jars/java jar_files/cldrdata.jar"/>
-	<classpathentry kind="lib" path="C:/RAMAKRISHNA/Personal/Automation/Drivers and Jars/java jar_files/dnsns.jar"/>
-	<classpathentry kind="lib" path="C:/RAMAKRISHNA/Personal/Automation/Drivers and Jars/java jar_files/jaccess.jar"/>
-	<classpathentry kind="lib" path="C:/RAMAKRISHNA/Personal/Automation/Drivers and Jars/java jar_files/jce.jar"/>
-	<classpathentry kind="lib" path="C:/RAMAKRISHNA/Personal/Automation/Drivers and Jars/java jar_files/jfr.jar"/>
-	<classpathentry kind="lib" path="C:/RAMAKRISHNA/Personal/Automation/Drivers and Jars/java jar_files/jfxrt.jar"/>
-	<classpathentry kind="lib" path="C:/RAMAKRISHNA/Personal/Automation/Drivers and Jars/java jar_files/jrt-fs.jar"/>
-	<classpathentry kind="lib" path="C:/RAMAKRISHNA/Personal/Automation/Drivers and Jars/java jar_files/jsse.jar"/>
-	<classpathentry kind="lib" path="C:/RAMAKRISHNA/Personal/Automation/Drivers and Jars/java jar_files/localedata.jar"/>
-	<classpathentry kind="lib" path="C:/RAMAKRISHNA/Personal/Automation/Drivers and Jars/java jar_files/nashorn.jar"/>
-	<classpathentry kind="lib" path="C:/RAMAKRISHNA/Personal/Automation/Drivers and Jars/java jar_files/resources.jar"/>
-	<classpathentry kind="lib" path="C:/RAMAKRISHNA/Personal/Automation/Drivers and Jars/java jar_files/rt.jar"/>
-	<classpathentry kind="lib" path="C:/RAMAKRISHNA/Personal/Automation/Drivers and Jars/java jar_files/sunec.jar"/>
-	<classpathentry kind="lib" path="C:/RAMAKRISHNA/Personal/Automation/Drivers and Jars/java jar_files/sunjce_provider.jar"/>
-	<classpathentry kind="lib" path="C:/RAMAKRISHNA/Personal/Automation/Drivers and Jars/java jar_files/sunmscapi.jar"/>
-	<classpathentry kind="lib" path="C:/RAMAKRISHNA/Personal/Automation/Drivers and Jars/java jar_files/sunpkcs11.jar"/>
-	<classpathentry kind="lib" path="C:/RAMAKRISHNA/Personal/Automation/Drivers and Jars/java jar_files/zipfs.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testScripts.leases.CreateNoteTest">
+      <class name="testScripts.leases.FilterTest">
         <methods>
-          <include name="createNote"/>
           <include name="reportSetup"/>
           <include name="tearDown"/>
+          <include name="filterTest"/>
           <include name="getResult"/>
         </methods>
-      </class> <!-- testScripts.leases.CreateNoteTest -->
+      </class> <!-- testScripts.leases.FilterTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

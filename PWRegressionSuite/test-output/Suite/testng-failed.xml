@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test name="Test(failed)">
-    <classes>
-      <class name="testScripts.leases.RecordRentersInsuranceTest">
-        <methods>
-          <include name="reportSetup"/>
-          <include name="tearDown"/>
-          <include name="getResult"/>
-        </methods>
-      </class> <!-- testScripts.leases.RecordRentersInsuranceTest -->
-      <class name="testScripts.leases.RentBumpTest">
-        <methods>
-          <include name="rentBump"/>
-          <include name="getResult"/>
-        </methods>
-      </class> <!-- testScripts.leases.RentBumpTest -->
-    </classes>
-  </test> <!-- Test(failed) -->
+	<test name="Test(failed)">
+		<classes>
+			<class name="testScripts.leases.RecordRentersInsuranceTest">
+				<methods>
+					<include name="reportSetup" />
+					<include name="tearDown" />
+					<include name="getResult" />
+				</methods>
+			</class> <!-- testScripts.leases.RecordRentersInsuranceTest -->
+			<class name="testScripts.leases.RentBumpTest">
+				<methods>
+					<include name="rentBump" />
+					<include name="getResult" />
+				</methods>
+			</class> <!-- testScripts.leases.RentBumpTest -->
+		</classes>
+	</test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
