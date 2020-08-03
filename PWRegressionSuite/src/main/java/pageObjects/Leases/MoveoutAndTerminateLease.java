@@ -17,6 +17,9 @@ public class MoveoutAndTerminateLease extends TestBase {
 	public static WebElement firstActiveLease(){
 		return driver.findElement(By.xpath("//td[@id='cell_0_0']//self::a"));
 	}
+	public static WebElement firstLease(){
+		return driver.findElement(By.xpath("//td[@id='cell_0_0']//self::a"));
+	}
 	public static WebElement moveOutLink(){
 		return driver.findElement(By.xpath("//a[contains(text(),'Move Out & Terminate')]"));
 	}

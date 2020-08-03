@@ -2,6 +2,9 @@ package pageObjects.Leases;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import testBase.TestBase;
 
 public class createPayment extends TestBase {
@@ -26,5 +29,9 @@ public class createPayment extends TestBase {
 	}
 	public static WebElement savePayment(){
 		return driver.findElement(By.id("saveBtn"));
+	}
+	public static void confirmPrepay(){
+		driver.switchTo().alert().accept();
+		(new WebDriverWait(driver, 5)).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[3]/div[2]/div[2]/ul[1]/li[5]/a[1]")));
 	}
 }

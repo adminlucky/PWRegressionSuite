@@ -24,5 +24,6 @@ public class LateFeePageTest extends TestBase {
 	NewLeaseFromLeasePage.ledger().click();
 	LeaseLedger.lateFee().click();
 	Assert.assertTrue(driver.getPageSource().contains("Late Fee Calculator"));
+	LeaseLedger.backToTenantLedger().click();
 	}
 }

@@ -22,4 +22,7 @@ public class LeaseLedger extends TestBase {
 	public static WebElement lateFee(){
 		return driver.findElement(By.xpath("//input[@value='Late Fee']"));
 	}
+	public static WebElement backToTenantLedger(){
+		return driver.findElement(By.xpath("//a[contains(text(),'<< Back to Tenant Ledger')]"));
+	}
 }

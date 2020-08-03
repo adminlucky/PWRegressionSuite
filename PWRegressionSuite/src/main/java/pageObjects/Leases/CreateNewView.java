@@ -61,7 +61,7 @@ public class CreateNewView extends TestBase {
 				continue;
 				}
 			
-			}
+		}
 		public static void selectView(){
 			(new Select(driver.findElement(By.name("viewID")))).selectByIndex(2);
 		}

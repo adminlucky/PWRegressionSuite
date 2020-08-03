@@ -1,6 +1,8 @@
 package testScripts.leases;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
 import org.testng.annotations.Test;
 
 import pageObjects.Leases.AddAutoCharge;

@@ -21,21 +21,21 @@ public class EditLease extends TestBase {
 	public static void edit(){
 		(new WebDriverWait(driver, 5)).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='primaryButtons']//input[2]")));
 		driver.findElement(By.xpath("//div[@class='primaryButtons']//input[2]")).click();
-		(new WebDriverWait(driver, 5)).until(ExpectedConditions.elementToBeClickable(By.xpath("//select[@id='entity.status']")));
+		(new WebDriverWait(driver, 5)).until(ExpectedConditions.elementToBeClickable(By.id("entity.status")));
 	}
 	
 	public static void activeToEviction(){
-		(new Select(driver.findElement(By.xpath("//select[@id='entity.status']")))).selectByVisibleText("Eviction");
+		(new Select(driver.findElement(By.id("entity.status")))).selectByVisibleText("Eviction");
 	}
 	public static void activeToTerminate(){
-		(new Select(driver.findElement(By.xpath("//select[@id='entity.status']")))).selectByVisibleText("Terminated");
+		(new Select(driver.findElement(By.id("entity.status")))).selectByVisibleText("Terminated");
 	}
 	public static void draftToActive(){
-		(new Select(driver.findElement(By.xpath("//select[@id='entity.status']")))).selectByVisibleText("Active");
+		(new Select(driver.findElement(By.id("entity.status")))).selectByVisibleText("Active");
 	}
 		
 	public static void publicAssistance(){
-		(new Select(driver.findElement(By.xpath("//select[@name='entity.publicAssistanceProgram']")))).selectByVisibleText("Rent Control");
+		(new Select(driver.findElement(By.name("entity.publicAssistanceProgram")))).selectByVisibleText("Rent Control");
 	}
 	public static WebElement description(){
 		return driver.findElement(By.xpath("//textarea[@name='entity.comments']"));
@@ -60,9 +60,9 @@ public class EditLease extends TestBase {
 	}
 	
 	public static void vacatedDate(){
-	    (new WebDriverWait(driver, 5)).until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name='entity.moveOutDateAsString']")));
+	    (new WebDriverWait(driver, 5)).until(ExpectedConditions.elementToBeClickable(By.name("entity.moveOutDateAsString")));
 		String date = new SimpleDateFormat("MM/dd/yyyy").format(new Date());
-		driver.findElement(By.xpath("//input[@name='entity.moveOutDateAsString']")).sendKeys(date);
+		driver.findElement(By.name("entity.moveOutDateAsString")).sendKeys(date);
 	}
 	public static void confirmTerminate(){
 		driver.switchTo().alert().accept();
@@ -73,9 +73,9 @@ public class EditLease extends TestBase {
 	
 	//Date not changing when date is already there  
 	public static void inspectionStartDate(){
-		(new WebDriverWait(driver, 5)).until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name='leaseInspectionStartDateAsString']")));
+		(new WebDriverWait(driver, 5)).until(ExpectedConditions.elementToBeClickable(By.name("leaseInspectionStartDateAsString")));
 		String date = new SimpleDateFormat("MM/dd/yyyy").format(new Date());
-		driver.findElement(By.xpath("//input[@name='leaseInspectionStartDateAsString']")).sendKeys(date);
+		driver.findElement(By.name("leaseInspectionStartDateAsString")).sendKeys(date);
 	}
 	public static WebElement costEstimate(){
 		return driver.findElement(By.name("leaseInspectionCostEstimateAsString"));

@@ -37,6 +37,9 @@ public class RentersInsurance extends TestBase {
 		cal.add(Calendar.YEAR, 1);
 		driver.findElement(By.name("policy.nextRenewalDateAsString")).sendKeys(simpleDateFormat1.format(cal.getTime()));
 	}
+	public static WebElement upload(){
+		return driver.findElement(By.xpath("//input[@name='file(1)']"));
+	}
 	public static WebElement comments(){
 		return driver.findElement(By.name("policy.comments"));
 	}

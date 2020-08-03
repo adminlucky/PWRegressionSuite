@@ -40,19 +40,23 @@ public class newLease extends TestBase {
 	}
 	public static WebElement selectLocation(){
 		String vacantUnitXpath = null;
-		for(int i=1; i<11; i++)
+		for(int i=1; i<10; i++) 
 		{
-			// xpath for check box : (//input[starts-with(@id,'unit')])[1]
-			String vacantText = "//body[@id='theBody']//tr//tr[" +i +"]//td[5]";
-			vacantUnitXpath = "(//input[starts-with(@id,'unit')])[" +i +"]";
-			String unitState = driver.findElement(By.xpath(vacantText)).getText().trim();
-			if(unitState.equalsIgnoreCase("Vacant")){
-				vacantUnit = driver.findElement(By.xpath(vacantUnitXpath));
-				break;
-			}
-			else{
-				continue;
+			for(int j=1; j<11; j++)
+			{
+				// xpath for check box : (//input[starts-with(@id,'unit')])[1]
+				String vacantText = "//body[@id='theBody']//tr//tr[" +j +"]//td[5]";
+				vacantUnitXpath = "(//input[starts-with(@id,'unit')])[" +j +"]";
+				String unitState = driver.findElement(By.xpath(vacantText)).getText().trim();
+				if(unitState.equalsIgnoreCase("Vacant")){
+					vacantUnit = driver.findElement(By.xpath(vacantUnitXpath));
+					break;
 				}
+				else	{	continue;}
+				
+			}
+			if(vacantUnit != null) {	break;}
+			else {	driver.findElement(By.xpath("//a[@class='pageNext']")).click();}
 		}
 		return vacantUnit;
 	}

@@ -33,6 +33,7 @@ public class RecordRentersInsuranceTest extends TestBase {
 	RentersInsurance.nextRenewalDate();
 	RentersInsurance.comments().sendKeys("Renters insurance for lease");
 	UtilityMethods.scrollDownHalf(driver);
+	RentersInsurance.upload().sendKeys("C:\\RAMAKRISHNA\\Propertyware\\Propertyware Documents\\Sample files\\RentMoneyVoucher.pdf");
 	RentersInsurance.save();
 	
 	}
