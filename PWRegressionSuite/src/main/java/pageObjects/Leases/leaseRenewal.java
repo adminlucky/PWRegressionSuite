@@ -11,7 +11,7 @@ import testBase.TestBase;
 import utilities.UtilityMethods;
 
 
-public class leaseRenewal extends TestBase {
+public class LeaseRenewal extends TestBase {
 	
 
 	public static WebElement terminatedLeases(){

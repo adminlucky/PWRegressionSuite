@@ -2,11 +2,10 @@ package testScripts.leases;
 
 import java.io.IOException;
 import org.testng.annotations.Test;
-
 import pageObjects.Leases.AddAutoCharge;
 import pageObjects.Leases.DeleteLease;
 import pageObjects.Leases.Login;
-import pageObjects.Leases.newLease;
+import pageObjects.Leases.NewLease;
 import testBase.TestBase;
 
 
@@ -17,8 +16,8 @@ public class DeleteLeaseTest extends TestBase {
 	test=extent.createTest("deleteLease");
 	Login.refreshPage();
 	AddAutoCharge.waitForLeases();
-	newLease.leases().click();
-	newLease.draftLeases().click();
+	NewLease.leases().click();
+	NewLease.draftLeases().click();
 	DeleteLease.firstLeaseCheckbox().click();
 	DeleteLease.delete().click();
 	DeleteLease.confirmDelete();

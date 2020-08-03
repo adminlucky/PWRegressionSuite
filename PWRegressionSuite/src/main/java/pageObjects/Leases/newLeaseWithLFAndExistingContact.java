@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import testBase.TestBase;
 
 	
-	public class newLeaseWithLFAndExistingContact extends TestBase {
+	public class NewLeaseWithLFAndExistingContact extends TestBase {
 		
 		public static WebElement element = null;
 		public static WebElement vacantUnit;

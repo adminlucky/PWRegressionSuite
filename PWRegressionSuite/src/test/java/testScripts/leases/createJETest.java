@@ -1,18 +1,15 @@
 package testScripts.leases;
 
 import java.io.IOException;
-
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
-
 import pageObjects.Leases.AddAutoCharge;
+import pageObjects.Leases.Adjustments;
+import pageObjects.Leases.CreateJE;
 import pageObjects.Leases.Login;
 import pageObjects.Leases.MoveoutAndTerminateLease;
-import pageObjects.Leases.adjustments;
-import pageObjects.Leases.createJE;
-import pageObjects.Leases.newLease;
+import pageObjects.Leases.NewLease;
 import testBase.TestBase;
-import utilities.UtilityMethods;
 
 
 public class CreateJETest extends TestBase {
@@ -21,21 +18,20 @@ public class CreateJETest extends TestBase {
 		test=extent.createTest("createNewJE");
 		Login.refreshPage();
 		AddAutoCharge.waitForLeases();
-		newLease.leases().click();
-		newLease.activeLeases().click();
+		NewLease.leases().click();
+		NewLease.activeLeases().click();
 		MoveoutAndTerminateLease.firstActiveLease().click();
-		adjustments.clickLedger().click();
-		createJE.newJE().click();
-		createJE.ref().sendKeys("je1234");
-		createJE.comments().sendKeys("Test Journel entry");
-		createJE.debitAccount();
-		createJE.debitAmount().sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
-		createJE.debitAmount().sendKeys("20");
-		createJE.creditAccount();
-		createJE.creditAmount().sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
-		createJE.creditAmount().sendKeys("20");
-		createJE.saveJE();
-		
+		Adjustments.clickLedger().click();
+		CreateJE.newJE().click();
+		CreateJE.ref().sendKeys("je1234");
+		CreateJE.comments().sendKeys("Test Journel entry");
+		CreateJE.debitAccount();
+		CreateJE.debitAmount().sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
+		CreateJE.debitAmount().sendKeys("20");
+		CreateJE.creditAccount();
+		CreateJE.creditAmount().sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
+		CreateJE.creditAmount().sendKeys("20");
+		CreateJE.saveJE();
 		
 	}
 }

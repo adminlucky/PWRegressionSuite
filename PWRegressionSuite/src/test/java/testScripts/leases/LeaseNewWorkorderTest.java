@@ -3,12 +3,11 @@ package testScripts.leases;
 import java.io.IOException;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
-
 import pageObjects.Leases.AddAutoCharge;
 import pageObjects.Leases.EditLease;
 import pageObjects.Leases.LeaseNewWorkorder;
 import pageObjects.Leases.Login;
-import pageObjects.Leases.newLease;
+import pageObjects.Leases.NewLease;
 import testBase.TestBase;
 import utilities.UtilityMethods;
 
@@ -20,7 +19,7 @@ public class LeaseNewWorkorderTest extends TestBase {
 	test=extent.createTest("newWorkorder");
 	Login.refreshPage();
 	AddAutoCharge.waitForLeases();
-	newLease.leases().click();
+	NewLease.leases().click();
 	EditLease.firstLease().click();
 	UtilityMethods.scrollDownHalf(driver);
 	LeaseNewWorkorder.newWorkorder().click();

@@ -15,7 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import testBase.TestBase;
 import utilities.UtilityMethods;
 
-public class newLease extends TestBase {
+public class NewLease extends TestBase {
 	
 	public static WebElement element = null;
 	public static WebElement vacantUnit;

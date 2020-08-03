@@ -9,7 +9,7 @@ import testBase.TestBase;
 import utilities.UtilityMethods;
 
 
-public class newLeaseWithExistingContact extends TestBase {
+public class NewLeaseWithExistingContact extends TestBase {
 	
 	//public static WebElement element = null;
 	//public static WebElement vacantUnit;

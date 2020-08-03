@@ -3,12 +3,11 @@ package testScripts.leases;
 import java.io.IOException;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
-
 import pageObjects.Leases.AddAutoCharge;
+import pageObjects.Leases.CreatePayment;
 import pageObjects.Leases.Login;
 import pageObjects.Leases.MoveoutAndTerminateLease;
-import pageObjects.Leases.createPayment;
-import pageObjects.Leases.newLease;
+import pageObjects.Leases.NewLease;
 import testBase.TestBase;
 
 public class CreatePaymentTest extends TestBase {
@@ -18,24 +17,24 @@ public class CreatePaymentTest extends TestBase {
 		test=extent.createTest("createPayment");
 		Login.refreshPage();
 		AddAutoCharge.waitForLeases();
-		newLease.leases().click();
-		newLease.activeLeases().click();
+		NewLease.leases().click();
+		NewLease.activeLeases().click();
 		MoveoutAndTerminateLease.firstActiveLease().click();
-		createPayment.ledger().click();
-		createPayment.newPayment().click();
-		createPayment.ref().sendKeys("3214");
-		createPayment.comment().sendKeys("Test for payment creation");
+		CreatePayment.ledger().click();
+		CreatePayment.newPayment().click();
+		CreatePayment.ref().sendKeys("3214");
+		CreatePayment.comment().sendKeys("Test for payment creation");
 		//Selecting unpaid charge or making prepayment
 		if(driver.getPageSource().contains("No Outstanding Charges"))
 		{
-			createPayment.prepayAmount().sendKeys(Keys.chord(Keys.CONTROL,"a",Keys.DELETE));
-			createPayment.prepayAmount().sendKeys("$150");
-			createPayment.savePayment().click();
+			CreatePayment.prepayAmount().sendKeys(Keys.chord(Keys.CONTROL,"a",Keys.DELETE));
+			CreatePayment.prepayAmount().sendKeys("$150");
+			CreatePayment.savePayment().click();
 			driver.switchTo().alert().accept();
 		}
 		else{
-			createPayment.selectUnpaidCharge().click();
-			createPayment.savePayment().click();
+			CreatePayment.selectUnpaidCharge().click();
+			CreatePayment.savePayment().click();
 		}
 		
 		

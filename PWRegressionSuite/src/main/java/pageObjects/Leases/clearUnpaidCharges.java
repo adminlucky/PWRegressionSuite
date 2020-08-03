@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import testBase.TestBase;
 import utilities.UtilityMethods;
 
-public class clearUnpaidCharges extends TestBase {
+public class ClearUnpaidCharges extends TestBase {
 	
 	public static WebElement clearUnpaid(){
 		UtilityMethods.scrollDownHalf(driver);

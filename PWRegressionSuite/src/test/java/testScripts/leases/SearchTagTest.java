@@ -1,16 +1,13 @@
 package testScripts.leases;
 
-import java.io.IOException;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
-
 import pageObjects.Leases.AddAutoCharge;
 import pageObjects.Leases.GlobalSearch;
 import pageObjects.Leases.Login;
 import pageObjects.Leases.MoveoutAndTerminateLease;
+import pageObjects.Leases.NewLease;
 import pageObjects.Leases.TotalLinks;
-import pageObjects.Leases.createCharge;
-import pageObjects.Leases.newLease;
 import testBase.TestBase;
 
 public class SearchTagTest extends TestBase {
@@ -22,7 +19,7 @@ public class SearchTagTest extends TestBase {
 		Login.refreshPage();
 		String searchTag = "TermAAA";
 		AddAutoCharge.waitForLeases();
-		newLease.leases().click();
+		NewLease.leases().click();
 		TotalLinks.terminatedLeases();
 		MoveoutAndTerminateLease.firstLease().click();
 		GlobalSearch.searchTag().click();

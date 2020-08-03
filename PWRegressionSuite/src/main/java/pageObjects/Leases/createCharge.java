@@ -11,7 +11,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import testBase.TestBase;
 
-public class createCharge extends TestBase {
+public class CreateCharge extends TestBase {
+	
 	public static WebElement element = null; 
 	
 	public static WebElement clickLedger(){

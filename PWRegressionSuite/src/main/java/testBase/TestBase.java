@@ -20,7 +20,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import dataReader.config_Reader;
-import pageObjects.Leases.newLease;
+import pageObjects.Leases.NewLease;
 import utilities.UtilityMethods;
 
 public class TestBase extends config_Reader {

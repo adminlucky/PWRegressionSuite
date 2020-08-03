@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import testBase.TestBase;
 
-public class createPayment extends TestBase {
+public class CreatePayment extends TestBase {
 	
 	public static WebElement ledger(){
 		return driver.findElement(By.xpath("//li[@id='tab2']"));

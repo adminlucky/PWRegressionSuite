@@ -1,16 +1,11 @@
 package testScripts.leases;
 
 import java.io.IOException;
-import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
-
 import pageObjects.Leases.AddAutoCharge;
 import pageObjects.Leases.CreateNewView;
-import pageObjects.Leases.EditLease;
 import pageObjects.Leases.Login;
-import pageObjects.Leases.MoveOut;
-import pageObjects.Leases.createCharge;
-import pageObjects.Leases.newLease;
+import pageObjects.Leases.NewLease;
 import testBase.TestBase;
 import utilities.UtilityMethods;
 
@@ -22,7 +17,7 @@ public class CreateLeasesNewViewTest extends TestBase {
 			test=extent.createTest("createLeasesNewView");
 			Login.refreshPage();
 			AddAutoCharge.waitForLeases();
-			newLease.leases().click();
+			NewLease.leases().click();
 			CreateNewView.newView().click();
 			CreateNewView.viewName().sendKeys("Draft Leases");
 			CreateNewView.unSelectedColumn();
@@ -33,7 +28,6 @@ public class CreateLeasesNewViewTest extends TestBase {
 			CreateNewView.value();
 			CreateNewView.addFilter().click();
 			CreateNewView.saveView();
-	
-	
+		
 		}
 }

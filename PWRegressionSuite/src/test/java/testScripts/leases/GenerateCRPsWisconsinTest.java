@@ -2,12 +2,11 @@ package testScripts.leases;
 
 import java.io.IOException;
 import org.testng.annotations.Test;
-
 import pageObjects.Leases.AddAutoCharge;
 import pageObjects.Leases.EditLease;
 import pageObjects.Leases.GenerateCRPs;
 import pageObjects.Leases.Login;
-import pageObjects.Leases.newLease;
+import pageObjects.Leases.NewLease;
 import testBase.TestBase;
 
 
@@ -18,8 +17,8 @@ public class GenerateCRPsWisconsinTest extends TestBase {
 	test=extent.createTest("generateCRPsWisconsin");
 	Login.refreshPage();
 	AddAutoCharge.waitForLeases();
-	newLease.leases().click();
-	newLease.activeLeases().click();
+	NewLease.leases().click();
+	NewLease.activeLeases().click();
 	GenerateCRPs.createdDateLink().click();
 	GenerateCRPs.sortAtoZ().click();
 	EditLease.firstLease().click();
@@ -32,6 +31,5 @@ public class GenerateCRPsWisconsinTest extends TestBase {
 	GenerateCRPs.attachToLeaseDocs().click();
 	GenerateCRPs.done().click();
 	}
-	
 	
 }

@@ -7,7 +7,7 @@ import testBase.TestBase;
 import utilities.UtilityMethods;
 
 
-public class adjustments extends TestBase {
+public class Adjustments extends TestBase {
 	
 	public static WebElement clickLedger(){
 		//return driver.findElement(By.xpath("//li[@id='tab2']"));

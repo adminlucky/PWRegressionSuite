@@ -10,8 +10,8 @@ import pageObjects.Leases.ApplySecDepCharges;
 import pageObjects.Leases.EditLease;
 import pageObjects.Leases.LeaseLedger;
 import pageObjects.Leases.Login;
+import pageObjects.Leases.NewLease;
 import pageObjects.Leases.NewLeaseFromLeasePage;
-import pageObjects.Leases.newLease;
 import testBase.TestBase;
 
 public class ApplySecDepToChargesTest extends TestBase {
@@ -21,8 +21,8 @@ public class ApplySecDepToChargesTest extends TestBase {
 	test=extent.createTest("applySecDepToCharges");
 	Login.refreshPage();
 	AddAutoCharge.waitForLeases();
-	newLease.leases().click();
-	newLease.activeLeases().click();
+	NewLease.leases().click();
+	NewLease.activeLeases().click();
 	EditLease.firstLease().click();
 	NewLeaseFromLeasePage.ledger().click();
 	LeaseLedger.applySecDepToCharges().click();

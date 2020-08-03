@@ -13,7 +13,7 @@ import testBase.TestBase;
 import utilities.UtilityMethods;
 
 	
-	public class newLeaseWithLeaseForm extends TestBase {
+	public class NewLeaseWithLeaseForm extends TestBase {
 		
 		public static WebElement element = null;
 		public static WebElement vacantUnit;

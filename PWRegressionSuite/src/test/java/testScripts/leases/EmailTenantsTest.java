@@ -1,16 +1,11 @@
 package testScripts.leases;
 
 import java.io.IOException;
-import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
-
 import pageObjects.Leases.AddAutoCharge;
-import pageObjects.Leases.EditLease;
 import pageObjects.Leases.EmailTenants;
 import pageObjects.Leases.Login;
-import pageObjects.Leases.MoveOut;
-import pageObjects.Leases.createCharge;
-import pageObjects.Leases.newLease;
+import pageObjects.Leases.NewLease;
 import testBase.TestBase;
 
 
@@ -19,10 +14,10 @@ public class EmailTenantsTest extends TestBase {
 	@Test
 	public void emailTenantsTest() throws IOException, InterruptedException{
 	test=extent.createTest("EmailTenantsTest");
-	//Login.refreshPage();
+	Login.refreshPage();
 	AddAutoCharge.waitForLeases();
-	newLease.leases().click();
-	newLease.activeLeases().click();
+	NewLease.leases().click();
+	NewLease.activeLeases().click();
 	EmailTenants.selectMultipleLeases();
 	EmailTenants.emailButton().click();
 	EmailTenants.emailTemplate();

@@ -7,7 +7,7 @@ import testBase.TestBase;
 import utilities.UtilityMethods;
 
 
-public class createJE extends TestBase {
+public class CreateJE extends TestBase {
 	
 	public static WebElement newJE(){
 		return driver.findElement(By.xpath("//div[@class='primaryButtons']//input[4]"));

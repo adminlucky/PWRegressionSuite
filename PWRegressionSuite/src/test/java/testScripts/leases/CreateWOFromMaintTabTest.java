@@ -3,13 +3,12 @@ package testScripts.leases;
 import java.io.IOException;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
-
 import pageObjects.Leases.AddAutoCharge;
 import pageObjects.Leases.EditLease;
 import pageObjects.Leases.LeaseMaintTab;
 import pageObjects.Leases.LeaseNewWorkorder;
 import pageObjects.Leases.Login;
-import pageObjects.Leases.newLease;
+import pageObjects.Leases.NewLease;
 import testBase.TestBase;
 import utilities.UtilityMethods;
 
@@ -21,8 +20,8 @@ public class CreateWOFromMaintTabTest extends TestBase {
 	test=extent.createTest("newWorkorderFromMaintTab");
 	Login.refreshPage();
 	AddAutoCharge.waitForLeases();
-	newLease.leases().click();
-	newLease.activeLeases().click();
+	NewLease.leases().click();
+	NewLease.activeLeases().click();
 	EditLease.firstLease().click();
 	UtilityMethods.scrollDown(driver);
 	LeaseMaintTab.maintTab().click();

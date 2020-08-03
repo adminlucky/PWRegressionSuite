@@ -1,16 +1,12 @@
 package testScripts.leases;
 
 import java.io.IOException;
-
-import org.openqa.selenium.By;
-import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import pageObjects.Leases.AddAutoCharge;
+import pageObjects.Leases.LeaseRenewal;
 import pageObjects.Leases.Login;
+import pageObjects.Leases.NewLease;
 import pageObjects.Leases.NewLeaseFromLeasePage;
-import pageObjects.Leases.leaseRenewal;
-import pageObjects.Leases.newLease;
 import testBase.TestBase;
 
 
@@ -20,16 +16,16 @@ public class LeaseRenewalTest extends TestBase {
 		test=extent.createTest("leaseRenewal");
 		Login.refreshPage();
 		AddAutoCharge.waitForLeases();
-		newLease.leases().click();
-		leaseRenewal.terminatedLeases().click();
-		leaseRenewal.firstTerminatedLease().click();
+		NewLease.leases().click();
+		LeaseRenewal.terminatedLeases().click();
+		LeaseRenewal.firstTerminatedLease().click();
 		NewLeaseFromLeasePage.leaseSummaryLink();
-		leaseRenewal.renewalLease().click();
+		LeaseRenewal.renewalLease().click();
 		//test.createNode("Lease renewal link clicked","Dates popup window will be opened");
-		leaseRenewal.newStartDate();
-		leaseRenewal.renewedDate();
-		leaseRenewal.newEndDate();
-		leaseRenewal.save();
+		LeaseRenewal.newStartDate();
+		LeaseRenewal.renewedDate();
+		LeaseRenewal.newEndDate();
+		LeaseRenewal.save();
 		/*boolean save = leaseRenewal.save().isDisplayed();
 		Assert.assertTrue(save);
 		test.createNode("Save button displayed");

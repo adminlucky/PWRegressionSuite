@@ -3,12 +3,11 @@ package testScripts.leases;
 import java.io.IOException;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
-
 import pageObjects.Leases.AddAutoCharge;
 import pageObjects.Leases.EditLease;
 import pageObjects.Leases.Login;
+import pageObjects.Leases.NewLease;
 import pageObjects.Leases.NewLeaseFromLeasePage;
-import pageObjects.Leases.newLease;
 import testBase.TestBase;
 
 
@@ -19,15 +18,15 @@ public class DraftToActiveTest extends TestBase {
 	test=extent.createTest("draftToActive");
 	Login.refreshPage();
 	AddAutoCharge.waitForLeases();
-	newLease.leases().click();
-	newLease.draftLeases().click();
+	NewLease.leases().click();
+	NewLease.draftLeases().click();
 	EditLease.firstLease().click();
 	NewLeaseFromLeasePage.leaseSummaryLink();
 	EditLease.edit();
 	EditLease.removeLocation().click();
-	newLease.location().click();
-	newLease.selectLocation().click();
-	newLease.done();
+	NewLease.location().click();
+	NewLease.selectLocation().click();
+	NewLease.done();
 	EditLease.draftToActive();
 	EditLease.publicAssistance();
 	EditLease.description().sendKeys(Keys.END, " - Draft lease converted to active lease");
@@ -37,7 +36,7 @@ public class DraftToActiveTest extends TestBase {
 	EditLease.costEstimate().sendKeys("$40");
 	EditLease.inspectionDesc().sendKeys("Sample Inspection");
 	EditLease.saveLease();
-	newLease.cancel();
+	NewLease.cancel();
 	
 	}
 }

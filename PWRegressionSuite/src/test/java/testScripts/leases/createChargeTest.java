@@ -5,10 +5,10 @@ import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
 import pageObjects.Leases.AddAutoCharge;
+import pageObjects.Leases.CreateCharge;
 import pageObjects.Leases.Login;
 import pageObjects.Leases.MoveoutAndTerminateLease;
-import pageObjects.Leases.createCharge;
-import pageObjects.Leases.newLease;
+import pageObjects.Leases.NewLease;
 import testBase.TestBase;
 
 public class CreateChargeTest extends TestBase {
@@ -19,17 +19,17 @@ public class CreateChargeTest extends TestBase {
 		test=extent.createTest("createCharge");
 		Login.refreshPage();
 		AddAutoCharge.waitForLeases();
-		newLease.leases().click();
-		newLease.activeLeases().click();
+		NewLease.leases().click();
+		NewLease.activeLeases().click();
 		MoveoutAndTerminateLease.firstActiveLease().click();
-		createCharge.clickLedger().click();
-		createCharge.newCharge().click();
-		createCharge.selectAccount();
-		createCharge.chargeRef().sendKeys("1234");
-		createCharge.amount().sendKeys(Keys.chord(Keys.CONTROL, "a"));
-		createCharge.amount().sendKeys("250");
-		createCharge.chargeDate();
-		createCharge.chargeComment().sendKeys("New charge in lease ledger");
-		createCharge.saveCharge();
+		CreateCharge.clickLedger().click();
+		CreateCharge.newCharge().click();
+		CreateCharge.selectAccount();
+		CreateCharge.chargeRef().sendKeys("1234");
+		CreateCharge.amount().sendKeys(Keys.chord(Keys.CONTROL, "a"));
+		CreateCharge.amount().sendKeys("250");
+		CreateCharge.chargeDate();
+		CreateCharge.chargeComment().sendKeys("New charge in lease ledger");
+		CreateCharge.saveCharge();
 	}
 }
